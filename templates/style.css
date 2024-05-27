@@ -1,0 +1,44 @@
+.Navbar{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    padding: 30px;
+}
+.logo{
+    grid-column: 1/6;
+    padding: 0; 
+}
+.logo img{
+    max-height: 25px;
+    width: 100px;
+}
+.nav-items{
+    margin: auto;
+    font-weight: 400;
+    font-size: 20px;
+}
+.nav-items button a{
+    text-decoration: none;
+    color: #0dcaf0;
+}
+.nav-items button:hover{
+    text-decoration: none;
+    color: black;
+}
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+.carousel-item p{
+    color: black;
+    font-size: 40px;
+    font-weight: 400;
+}
+button.btn.btn-outline-dark{
+    font-size: 45px;
+}
+.btn-outline-info:hover{
+    color: black;
+}
+.btn-outline-info:active{
+    color: black;
+}
