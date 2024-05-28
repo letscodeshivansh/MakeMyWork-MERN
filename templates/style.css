@@ -20,6 +20,10 @@
     text-decoration: none;
     color: #0dcaf0;
 }
+.nav-items a{
+    text-decoration: none;
+    color: black;
+}
 .nav-items button:hover{
     text-decoration: none;
     color: black;
