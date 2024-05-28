@@ -10,11 +10,17 @@ MakeMyWork is a unique platform designed to bridge the gap between individuals s
 <br>
 
 Task Posting: Users can easily post tasks they need assistance with, providing details such as task description, location, budget, and deadline.
+
 Task Discovery: MakeMyWork enables users to browse through posted tasks based on categories, locations, and keywords, making it simple to find tasks that match their skills and interests.
+
 Profile Creation: Both task posters and task doers can create profiles showcasing their skills, experience, and ratings, facilitating trust and transparency within the community.
+
 Messaging System: MakeMyWork includes an integrated messaging system that allows users to communicate directly to discuss task details, negotiate terms, and coordinate the completion of tasks.
+
 Secure Payments: The platform provides a secure payment system, ensuring that transactions between task posters and task doers are conducted safely and reliably.
+
 Rating and Review System: Upon task completion, users can leave ratings and reviews for each other, helping to build a trustworthy and reputable community.
+
 <br>
 
 <h2>Why MakeMyWork?</h2>
