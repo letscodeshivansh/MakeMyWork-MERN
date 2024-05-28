@@ -13,7 +13,7 @@ const loginSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    floatingPassword: {
+    floatPassword: {
         type: String,
         required: true
     }

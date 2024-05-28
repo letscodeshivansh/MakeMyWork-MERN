@@ -9,11 +9,11 @@ mongoose.connect("mongodb://localhost:27017/MakeMyWork")
 });
 
 const loginSchema = new mongoose.Schema({
-    floatingInput: {
+    floating: {
         type: String,
         required: true
     },
-    floatingPassword: {
+    password: {
         type: String,
         required: true
     }

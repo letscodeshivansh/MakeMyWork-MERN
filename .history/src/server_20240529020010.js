@@ -28,7 +28,7 @@ app.post("/signup", async (req, res) => {
     try {
         const data = {
             floatingInput: req.body.floatingInput,
-            floatingPassword: req.body.floatingPassword
+            password: req.body.floatingPassword
         };
 
         await collection.insertMany(data);
