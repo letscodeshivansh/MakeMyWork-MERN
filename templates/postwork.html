@@ -1,0 +1,33 @@
+<div class="max-w-lg mx-auto bg-gray-100 rounded-xl shadow-md overflow-hidden">
+    <div class="md:flex">
+      <div class="md:flex-shrink-0">
+        <img class="h-48 w-full object-cover md:h-full md:w-48" src="task_image.jpg" alt="Task Image">
+      </div>
+      <div class="p-8 flex flex-col justify-between">
+        <div>
+          <h2 class="text-xl font-semibold text-gray-800">Post Work</h2>
+          <p class="mt-2 text-gray-600">Provide the details of the task you need assistance with:</p>
+          <form class="mt-4">
+            <div class="mb-4">
+              <label class="block text-sm font-semibold text-gray-700" for="title">Title:</label>
+              <input type="text" id="title" name="title" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500" placeholder="Enter the title of the task">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-semibold text-gray-700" for="description">Description:</label>
+              <textarea id="description" name="description" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500" rows="3" placeholder="Enter the description of the task"></textarea>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-semibold text-gray-700" for="deadline">Deadline:</label>
+              <input type="date" id="deadline" name="deadline" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500">
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-semibold text-gray-700" for="price">Price:</label>
+              <input type="text" id="price" name="price" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-gray-500 focus:border-gray-500" placeholder="Enter the price for the task">
+            </div>
+            <button type="submit" class="inline-block bg-gray-800 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">Add Work</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

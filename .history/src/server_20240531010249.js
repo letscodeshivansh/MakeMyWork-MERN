@@ -21,7 +21,6 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "index.html"));
 });
 
-//for login
 app.get("/login.html", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "login.html"));
 });

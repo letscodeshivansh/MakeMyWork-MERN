@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://127.0.0.1:27017/MakeMyWork")
-
+mongoose.connect("mongodb://localhost:27017/MakeMyWork")
 .then(() => {
     console.log("MongoDB connected");
 })
@@ -9,7 +8,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/MakeMyWork")
     console.error("MongoDB connection error:", error);
 });
 
-const SignUpInfoSchema = new mongoose.Schema({
+const LoginSchema = new mongoose.Schema({
     floatingInput: {
         type: String,
         required: true
@@ -20,6 +19,6 @@ const SignUpInfoSchema = new mongoose.Schema({
     }
 });
 
-const SignUpInfo = mongoose.model("SignUpInfo", SignUpInfoSchema);
+const Login = mongoose.model("login", loginSchema);
 
-module.exports = SignUpInfo;
+module.exports = login;

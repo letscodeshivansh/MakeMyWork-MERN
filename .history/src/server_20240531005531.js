@@ -21,18 +21,11 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "index.html"));
 });
 
-//for login
-app.get("/login.html", (req, res) => {
+app.get("/login", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "login.html"));
 });
 
-//for sign up 
-app.get("/signup.html", (req, res) => {
-    res.sendFile(path.join(parentDir, "templates", "signup.html"));
-});
-
-
-app.post("/signup.html", async (req, res) => {
+app.post("/signup", async (req, res) => {
     try {
         const data = {
             floatingInput: req.body.floatingInput,

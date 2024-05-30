@@ -20,6 +20,6 @@ const SignUpInfoSchema = new mongoose.Schema({
     }
 });
 
-const SignUpInfo = mongoose.model("SignUpInfo", SignUpInfoSchema);
+const SignUpInfoInfo = mongoose.model("SignUpInfo", SignUpInfoSchema);
 
 module.exports = SignUpInfo;

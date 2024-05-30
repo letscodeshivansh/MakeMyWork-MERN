@@ -9,7 +9,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/MakeMyWork")
     console.error("MongoDB connection error:", error);
 });
 
-const SignUpInfoSchema = new mongoose.Schema({
+const loginSchema = new mongoose.Schema({
     floatingInput: {
         type: String,
         required: true
@@ -20,6 +20,6 @@ const SignUpInfoSchema = new mongoose.Schema({
     }
 });
 
-const SignUpInfo = mongoose.model("SignUpInfo", SignUpInfoSchema);
+const SignUpInfoInfo = mongoose.model("SignUpInfo", loginSchema);
 
-module.exports = SignUpInfo;
+module.exports = LoginInfo;

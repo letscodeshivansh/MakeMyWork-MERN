@@ -21,12 +21,11 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "index.html"));
 });
 
-//for login
 app.get("/login.html", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "login.html"));
 });
 
-//for sign up 
+
 app.get("/signup.html", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "signup.html"));
 });
