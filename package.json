@@ -1,7 +1,7 @@
 {
   "name": "makemywork-",
   "version": "1.0.0",
-  "description": "",
+  "description": "<h1> MakeMyWork</h1>\r <br>\r <h2>Description: </h2>\r <br>",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2",
+    "hbs": "^4.2.0",
+    "html": "^1.0.0",
+    "mongodb": "^6.6.2",
+    "mongoose": "^8.4.0",
     "node": "^18.20.3",
+    "nodemon": "^3.1.1",
     "ws": "^8.17.0"
   }
 }
