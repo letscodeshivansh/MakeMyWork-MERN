@@ -37,8 +37,10 @@
     font-size: 40px;
     font-weight: 400;
 }
-button.btn.btn-outline-dark{
+button.btn.btn-outline-dark a{
     font-size: 45px;
+    text-decoration: none;
+    color: black;
 }
 .btn-outline-info:hover{
     color: black;
