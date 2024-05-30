@@ -47,11 +47,11 @@ app.post("/signup.html", async (req, res) => {
     }
 });
 
-app.post("/login", async (req, res) => {
+app.post("/login.htmld", async (req, res) => {
     try {
-        const check = await collection.findOne({ floatingInput: req.body.floatingInput });
+        const check = await collection.findOne({ name: req.body.floatingInput });
 
-        if (check.floatingPassword === req.body.floatingPassword) {
+        if (check.password === req.body.floatingPassword) {
             res.sendFile(path.join(parentDir, "templates", "index.html"));
         } else {
             res.send("Wrong Password");

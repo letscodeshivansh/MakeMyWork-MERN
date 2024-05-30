@@ -51,7 +51,7 @@ app.post("/login", async (req, res) => {
     try {
         const check = await collection.findOne({ floatingInput: req.body.floatingInput });
 
-        if (check.floatingPassword === req.body.floatingPassword) {
+        if (check.password === req.body.floatingPassword) {
             res.sendFile(path.join(parentDir, "templates", "index.html"));
         } else {
             res.send("Wrong Password");
