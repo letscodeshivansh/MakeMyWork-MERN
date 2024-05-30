@@ -35,6 +35,17 @@ MakeMyWork offers a flexible and accessible solution for individuals looking to 
 We welcome contributions from developers, designers, and enthusiasts who are passionate about improving MakeMyWork. Feel free to fork the repository, make your changes, and submit pull requests. Together, we can make MakeMyWork even better!
 <br>
 
+
+<h2> How to run this project: </h2>
+<h3>Step-1: Copy and Paste in terminal : "git clone https://github.com/letscodeshivansh/MakeMyWork-.git" </h3>
+<h3>Step-2: Now run the command: "npm init -y" </h3>
+<h3>Step-3: Now run the commond: "npm i" </h3>
+<h3>Step-4: Now you can search in your browser: "http://localhost:6969/" </h3>
+
+
+<br>
+
+
 <h2>License:</h2>
 <br>
 
