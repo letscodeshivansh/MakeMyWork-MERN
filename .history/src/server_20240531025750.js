@@ -81,7 +81,6 @@ app.post("/postwork", async(req, res)=>{
         
         res.sendFile(path.join(parentDir, "templates", "index.html"));
         
-        
     } catch (error) {
         res.status(500).send("Error in adding the work up");
     }

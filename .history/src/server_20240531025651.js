@@ -80,13 +80,12 @@ app.post("/postwork", async(req, res)=>{
         await collection.insertMany(data);
         
         res.sendFile(path.join(parentDir, "templates", "index.html"));
-        
-        
+        alert
     } catch (error) {
         res.status(500).send("Error in adding the work up");
     }
 
-});
+})
 
 app.listen(6969, () => {
     console.log("Server is running on port 6969");

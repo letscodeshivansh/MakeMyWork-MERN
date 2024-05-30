@@ -20,29 +20,22 @@ const SignUpInfoSchema = new mongoose.Schema({
     }
 });
 
-const taskSchema = new mongoose.Schema({
-    title: {
-      type: String,
-      required: true
+const postworkschema = new mongoose.Schema({
+    title : {
+        type: String,
+        required: true
     },
     description: {
-      type: String,
-      required: true
+        type: String,
+        required: true
     },
     deadline: {
-      type: Date,
-      required: true
-    },
-    price: {
-      type: Number,
-      required: true
+        type: date
     }
-});
 
-//for storing the login informations 
+
+})
+
 const SignUpInfo = mongoose.model("SignUpInfo", SignUpInfoSchema);
-module.exports = SignUpInfo;
 
-//for storing the task 
-const Task = mongoose.model('Task', taskSchema);
-module.exports = Task;
+module.exports = SignUpInfo;

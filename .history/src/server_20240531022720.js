@@ -31,11 +31,6 @@ app.get("/signup.html", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "signup.html"));
 });
 
-//for posting work
-app.get("/postwork.html", (req, res) => {
-    res.sendFile(path.join(parentDir, "templates", "postwork.html"));
-});
-
 
 
 
@@ -66,26 +61,6 @@ app.post("/login", async (req, res) => {
     } catch (error) {
         res.status(500).send("Error logging in");
     }
-});
-
-app.post("/postwork", async(req, res)=>{
-    try {
-        const data = {
-            title: req.body.title,
-            description: req.body.description,
-            deadline: req.body.deadline,
-            price: req.body.price
-        };
-
-        await collection.insertMany(data);
-        
-        res.sendFile(path.join(parentDir, "templates", "index.html"));
-        
-        
-    } catch (error) {
-        res.status(500).send("Error in adding the work up");
-    }
-
 });
 
 app.listen(6969, () => {

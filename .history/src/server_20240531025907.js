@@ -80,7 +80,7 @@ app.post("/postwork", async(req, res)=>{
         await collection.insertMany(data);
         
         res.sendFile(path.join(parentDir, "templates", "index.html"));
-        
+        res.status(200).send({ message: "Task added successfully" });
         
     } catch (error) {
         res.status(500).send("Error in adding the work up");

@@ -39,10 +39,8 @@ const taskSchema = new mongoose.Schema({
     }
 });
 
-//for storing the login informations 
 const SignUpInfo = mongoose.model("SignUpInfo", SignUpInfoSchema);
-module.exports = SignUpInfo;
+const taskInfo = mongoose.model("taskInfo", taskSchema);
 
-//for storing the task 
-const Task = mongoose.model('Task', taskSchema);
-module.exports = Task;
+module.exports = SignUpInfo;
+module.exports = taskInfo;

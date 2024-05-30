@@ -39,7 +39,7 @@ const taskSchema = new mongoose.Schema({
     }
 });
 
-//for storing the login informations 
+
 const SignUpInfo = mongoose.model("SignUpInfo", SignUpInfoSchema);
 module.exports = SignUpInfo;
 

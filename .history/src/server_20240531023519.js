@@ -73,20 +73,18 @@ app.post("/postwork", async(req, res)=>{
         const data = {
             title: req.body.title,
             description: req.body.description,
-            deadline: req.body.deadline,
-            price: req.body.price
+            deadline: req.body.floatingPassword,
+            price: req.body.floatingPassword,
         };
 
         await collection.insertMany(data);
         
         res.sendFile(path.join(parentDir, "templates", "index.html"));
-        
-        
     } catch (error) {
         res.status(500).send("Error in adding the work up");
     }
 
-});
+})
 
 app.listen(6969, () => {
     console.log("Server is running on port 6969");

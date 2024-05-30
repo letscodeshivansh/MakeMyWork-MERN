@@ -38,10 +38,23 @@
         Task</button>
     </form>
   </div>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("form").submit(function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        // Submit form using AJAX
+        $.post($(this).attr("action"), $(this).serialize(), function(response) {
+          // Show alert if task added successfully
+          alert(response.message);
+        }).fail(function() {
+          // Show alert if an error occurred
+          alert("Error in adding the work");
+        });
+      });
+    });
+  </script>
 
 </html>
