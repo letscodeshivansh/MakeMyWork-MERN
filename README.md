@@ -38,8 +38,8 @@ We welcome contributions from developers, designers, and enthusiasts who are pas
 
 <h2> How to run this project: </h2>
 <h3>Step-1: Copy and Paste in terminal : "git clone https://github.com/letscodeshivansh/MakeMyWork-.git" </h3>
-<h3>Step-2: Now run the command: "npm init -y" </h3>
-<h3>Step-3: Now run the commond: "npm i" </h3>
+<h3>Step-2: Now run the command in your terminal: "npm init -y" </h3>
+<h3>Step-3: Now run the command in your termina: "npm i" </h3>
 <h3>Step-4: Now you can search in your browser: "http://localhost:6969/" </h3>
 
 
