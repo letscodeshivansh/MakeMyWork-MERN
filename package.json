@@ -18,7 +18,7 @@
     "node": "^18.20.3",
     "nodemon": "^3.1.1",
     "react": "^18.3.1",
+    "socket.io": "^4.7.5",
     "ws": "^8.17.0"
-  },
-  "devDependencies": {}
+  }
 }
