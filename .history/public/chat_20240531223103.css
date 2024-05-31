@@ -1,0 +1,51 @@
+/* Tailwind CSS for Chat Room UI */
+
+/* Base Styles */
+@tailwind base;
+
+/* Components */
+@tailwind components;
+
+/* Utilities */
+@tailwind utilities;
+
+/* Custom Chat Room Styles */
+
+/* Container for Chat Messages */
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Chat Message */
+.chat-message {
+    background-color: #f0f0f0;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Sender's Message */
+.sender-message {
+    background-color: #e2f7cb;
+    align-self: flex-end;
+}
+
+/* Receiver's Message */
+.receiver-message {
+    background-color: #d6e4ff;
+    align-self: flex-start;
+}
+
+/* Input Box for Typing Message */
+.message-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}

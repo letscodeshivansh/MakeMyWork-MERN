@@ -1,0 +1,35 @@
+/* CSS */
+.chat-box {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .conversation {
+    padding: 20px;
+  }
+  
+  .message {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .message:nth-child(even) {
+    background-color: #32353e;
+    color: #fff;
+  }
+  
+  .message:nth-child(odd) {
+    background-color: #424651;
+    color: #fff;
+  }
+  
+  .message p {
+    margin: 0;
+    padding: 10px;
+  }

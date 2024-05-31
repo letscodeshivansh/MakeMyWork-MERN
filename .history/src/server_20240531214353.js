@@ -41,16 +41,6 @@ app.get("/postwork.html", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "postwork.html"));
 });
 
-// Serve the chat.html file
-app.get("/chat.html", (req, res) => {
-    res.sendFile(path.join(parentDir, "templates", "chat.html"));
-});
-
-// Serve the chat.js file
-app.get("/chat.js", (req, res) => {
-    res.sendFile(path.join(__dirname, "chat.js"));
-});
-
 // Socket.io events
 io.on("connection", (socket) => {
     console.log("A user connected");
@@ -59,13 +49,8 @@ io.on("connection", (socket) => {
         console.log("User disconnected");
     });
 
-    // Listen for messages
-    socket.on("chat message", (msg) => {
-        // Broadcast the message to all connected clients
-        io.emit("chat message", msg);
-    });
+    // Additional socket events can be added here
 });
-
 
 
 //restoring the data of new user
@@ -124,6 +109,4 @@ const port = 6969;
 server.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-
-
-//hello get to the next step
+//hello 

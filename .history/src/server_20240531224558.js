@@ -42,8 +42,8 @@ app.get("/postwork.html", (req, res) => {
 });
 
 // Serve the chat.html file
-app.get("/chat.html", (req, res) => {
-    res.sendFile(path.join(parentDir, "templates", "chat.html"));
+app.get("/chat", (req, res) => {
+    res.sendFile(path.join(__dirname, "chat.html"));
 });
 
 // Serve the chat.js file
