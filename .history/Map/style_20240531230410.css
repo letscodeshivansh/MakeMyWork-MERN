@@ -1,0 +1,38 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: calc(100%);
+    height: calc(100%);
+}
+
+.mapbox-directions-instructions {
+    overflow: auto !important;
+}
+
+div#geocoder-search {
+    width: 25em;
+}
+
+.marker {
+    font-size: 3em;
+    color: #bb0000;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
