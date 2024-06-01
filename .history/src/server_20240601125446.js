@@ -4,12 +4,10 @@ const socketIo = require("socket.io");
 const path = require("path");
 const collection = require("./mongodb");
 const multer = require("multer");
-
-//data collection link 
 const Task = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
-const SignUpInfo = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
+const  = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
 
-//express server
+
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);

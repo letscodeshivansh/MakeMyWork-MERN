@@ -4,12 +4,9 @@ const socketIo = require("socket.io");
 const path = require("path");
 const collection = require("./mongodb");
 const multer = require("multer");
-
-//data collection link 
 const Task = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
-const SignUpInfo = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
 
-//express server
+
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
@@ -93,6 +90,7 @@ app.post("/signup", async (req, res) => {
         res.status(500).send("Error signing up");
     }
 });
+
 
 //checking password and email for login 
 app.post("/login", async (req, res) => {

@@ -9,7 +9,7 @@ const multer = require("multer");
 const Task = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
 const SignUpInfo = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
 
-//express server
+
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);

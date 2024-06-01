@@ -5,11 +5,6 @@ const path = require("path");
 const collection = require("./mongodb");
 const multer = require("multer");
 
-//data collection link 
-const Task = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
-const SignUpInfo = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
-
-//express server
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
@@ -74,25 +69,22 @@ io.on("connection", (socket) => {
 
 
 
-// Handle sign-up request
+//restoring the data of new user
 app.post("/signup", async (req, res) => {
     try {
-        const { floatingInput, floatingPassword } = req.body;
+        const data = {
+            floatingInput: req.body.floatingInput,
+            floatingPassword: req.body.floatingPassword
+        };
 
-        // Create a new SignUpInfo document with the provided data
-        const signUpInfo = new SignUpInfo({
-            floatingInput,
-            floatingPassword
-        });
-
-        // Save the SignUpInfo document to the database
-        await signUpInfo.save();
+        await collection.insertMany(data);
         
         res.sendFile(path.join(parentDir, "templates", "index.html"));
     } catch (error) {
         res.status(500).send("Error signing up");
     }
 });
+
 
 //checking password and email for login 
 app.post("/login", async (req, res) => {

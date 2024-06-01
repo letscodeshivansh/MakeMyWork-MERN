@@ -5,11 +5,6 @@ const path = require("path");
 const collection = require("./mongodb");
 const multer = require("multer");
 
-//data collection link 
-const Task = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
-const SignUpInfo = require("./mongodb"); // Assuming the Task model is exported from mongodb.js
-
-//express server
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
@@ -74,25 +69,22 @@ io.on("connection", (socket) => {
 
 
 
-// Handle sign-up request
+//restoring the data of new user
 app.post("/signup", async (req, res) => {
     try {
-        const { floatingInput, floatingPassword } = req.body;
+        const data = {
+            floatingInput: req.body.floatingInput,
+            floatingPassword: req.body.floatingPassword
+        };
 
-        // Create a new SignUpInfo document with the provided data
-        const signUpInfo = new SignUpInfo({
-            floatingInput,
-            floatingPassword
-        });
-
-        // Save the SignUpInfo document to the database
-        await signUpInfo.save();
+        await collection.insertMany(data);
         
         res.sendFile(path.join(parentDir, "templates", "index.html"));
     } catch (error) {
         res.status(500).send("Error signing up");
     }
 });
+
 
 //checking password and email for login 
 app.post("/login", async (req, res) => {
@@ -114,49 +106,43 @@ app.post("/login", async (req, res) => {
 // Multer configuration for handling file uploads
 
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'uploads/') // Directory where uploaded files will be stored
-    },
-    filename: function (req, file, cb) {
-        cb(null, Date.now() + '-' + file.originalname) // Unique file name
-    }
+  destination: function (req, file, cb) {
+    cb(null, path.join(parentDir, 'MakeMyTrip-', 'uploads'));
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname);
+  }
 });
 
+// Multer upload instance
 const upload = multer({ storage: storage });
 
 // Handle POST request to '/postwork' for adding a task
-
 app.post("/postwork", upload.array('images', 5), async (req, res) => {
     try {
         const { title, description, deadline, price } = req.body;
         
         // Get the URLs of uploaded images
         const imageUrls = req.files.map(file => '/uploads/' + file.filename);
-        console.log("Image URLs:", imageUrls); // Check if image URLs are correct
 
         // Create a new task with the provided data
-        const task = new Task({
+        const task = new collection({
             title,
             description,
             deadline,
             price,
             images: imageUrls
         });
-        console.log("Task:", task); // Check if task object is correct
 
         // Save the task to the database
         await task.save();
         
         res.send("Task added successfully");
     } catch (error) {
-        console.error("Error adding task:", error); // Log any errors
         res.status(500).send("Error adding task");
     }
 });
 
-
-// Serve uploaded files statically
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 //Listening on the port 
 const port = 6969;
