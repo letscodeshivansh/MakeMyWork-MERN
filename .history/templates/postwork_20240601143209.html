@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Form</title>
+  <!-- Link to the Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  
+  <div class="container mx-auto mt-8">
+    <form id="taskForm" enctype="multipart/form-data" class="max-w-md mx-auto p-4 bg-white rounded shadow-md">
+      <h2 class="text-lg text-gray-800 mb-4">Add Task</h2>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="title">Title</label>
+        <input class="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded" name="title" type="text"
+          placeholder="Enter task title">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="description">Description</label>
+        <textarea class="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded" name="description"
+          placeholder="Enter task description"></textarea>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="deadline">Deadline</label>
+        <input class="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded" name="deadline" type="date"
+          placeholder="Enter task deadline">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="price">Price</label>
+        <input class="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded" name="price" type="number"
+          placeholder="Enter task price">
+      </div>
+      <!-- Input field for selecting images -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="images">Images</label>
+        <input type="file" name="images" multiple>
+      </div>
+      <button class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded" type="submit">Add
+        Task</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#taskForm").submit(function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Perform the form submission using AJAX
+        $.ajax({
+          url: "/postwork",
+          type: "POST",
+          data: new FormData(this),
+          processData: false,
+          contentType: false,
+          success: function(response) {
+            // Show an alert with the success message
+            alert("Task Successfully saved: " + response);
+          },
+          error: function(xhr, status, error) {
+            // Show an alert with the error message
+            alert("Error: " + error);
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
