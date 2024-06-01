@@ -1,7 +1,5 @@
-$(document).ready(function() {
-  // Fetch the index.html file when the page loads
-  $.get("../templates/index.html", function() {
-    // Once index.html is fetched, bind the form submission event
+<script>
+  $(document).ready(function() {
     $("#taskForm").submit(function(event) {
       event.preventDefault(); // Prevent the default form submission
 
@@ -13,10 +11,10 @@ $(document).ready(function() {
         processData: false,
         contentType: false,
         success: function(response) {
-          // Redirect to the index page
-          window.location.href = "../templates/index.html";
           // Show an alert with the success message
-          alert("Task Successfully saved");
+          alert("Task Successfully saved: " + response.successMessage);
+          // Redirect to the index page
+          window.location.href = "/index.html";
         },
         error: function(xhr, status, error) {
           // Show an alert with the error message
@@ -25,4 +23,4 @@ $(document).ready(function() {
       });
     });
   });
-});
+</script>

@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function sendMessage(message, sender) {
         const messageElement = document.createElement("div");
         messageElement.classList.add("message");
-        // messageElement.textContent = message;
+        messageElement.textContent = message;
         messageElement.classList.add(sender); // Add class to differentiate sender and receiver
         messageContainer.appendChild(messageElement);
         messageContainer.scrollTop = messageContainer.scrollHeight;

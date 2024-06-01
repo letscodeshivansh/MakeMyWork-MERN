@@ -31,11 +31,6 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "index.html"));
 });
 
-// Add a route to serve the index.html file
-app.get("/index", (req, res) => {
-    res.sendFile(path.join(parentDir, "templates", "index.html"));
-});
-
 // For login
 app.get("/login.html", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "login.html"));
@@ -113,9 +108,11 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// Multer configuration for handling file uploads
 
+//storing the details of task into the database file name "MakeMyWork/task"
+// Multer configuration for handling file uploads
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'uploads/') // Directory where uploaded files will be stored
@@ -128,6 +125,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Handle POST request to '/postwork' for adding a task
+// Add a route to serve the index.html file
+app.get("/index", (req, res) => {
+    res.sendFile(path.join(parentDir, "templates", "index.html"));
+});
 
 // Handle the POST request to add a task
 app.post("/postwork", upload.array('images', 5), async (req, res) => {
@@ -151,14 +152,14 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
         // Save the task to the database
         await taskAdded.save();
         
-        // Redirect to index.html upon successful task submission
-        res.redirect("/index");
+        // Send a success response
+        res.status(200).json({ success: true });
+        
     } catch (error) {
         console.error("Error adding task:", error); // Log any errors
         res.status(500).send("Error adding task");
     }
 });
-
 
 
 // Serve uploaded files statically

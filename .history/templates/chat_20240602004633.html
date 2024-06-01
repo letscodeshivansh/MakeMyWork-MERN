@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <!-- Link to your custom CSS -->
+    <style>
+        .message {
+            padding: 8px;
+            margin-bottom: 8px;
+            border-radius: 8px;
+        }
+
+        .sender {
+            text-align: right;
+            background-color: #DCF8C6; /* Light green for sender */
+            margin-left: auto;
+        }
+
+        .receiver {
+            text-align: left;
+            background-color: #F3F3F3; /* Light gray for receiver */
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="message-container"></div>
+    <form id="message-form">
+        <input type="text" id="message-input" placeholder="Type your message...">
+        <button type="submit">Send</button>
+    </form>
+
+    <!-- Socket.io script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const socket = io();
+        
+            const messageForm = document.getElementById("message-form");
+            const messageInput = document.getElementById("message-input");
+            const messageContainer = document.getElementById("message-container");
+        
+            messageForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                const message = messageInput.value.trim();
+                if (message !== "") {
+                    sendMessage(message, "sender");
+                    messageInput.value = "";
+                }
+            });
+        
+            function sendMessage(message, sender) {
+                const messageElement = document.createElement("div");
+                messageElement.classList.add("message");
+                messageElement.textContent = message;
+                messageElement.classList.add(sender); // Add class to differentiate sender and receiver
+                messageContainer.appendChild(messageElement);
+                messageContainer.scrollTop = messageContainer.scrollHeight;
+                socket.emit("chat message", message);
+            }
+        
+            socket.on("chat message", (message) => {
+                displayReceivedMessage(message);
+            });
+        
+            function displayReceivedMessage(message) {
+                const messageElement = document.createElement("div");
+                messageElement.classList.add("message");
+                messageElement.textContent = message;
+                messageElement.classList.add("receiver"); // Add class to differentiate sender and receiver
+                messageContainer.appendChild(messageElement);
+                messageContainer.scrollTop = messageContainer.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>

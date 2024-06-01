@@ -46,7 +46,33 @@
 
   <!-- Load jQuery before the script -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Your script -->
+  <script>
+    // Example using jQuery
+    $(document).ready(function() {
+      $("#taskForm").submit(function(event) {
+        event.preventDefault(); // Prevent the default form submission
 
+        // Perform the form submission using AJAX
+        $.ajax({
+          url: "/postwork",
+          type: "POST",
+          data: new FormData(this),
+          processData: false,
+          contentType: false,
+          success: function(response) {
+            // Show an alert with the success message
+            alert("Task Successfully saved: " + response);
+          },
+          error: function(xhr, status, error) {
+            // Show an alert with the error message
+            alert("Error: " + error);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

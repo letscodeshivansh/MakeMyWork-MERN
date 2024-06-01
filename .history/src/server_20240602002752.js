@@ -31,8 +31,7 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "index.html"));
 });
 
-// Add a route to serve the index.html file
-app.get("/index", (req, res) => {
+app.get("/taskadded", (req, res) => {
     res.sendFile(path.join(parentDir, "templates", "index.html"));
 });
 
@@ -113,9 +112,11 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// Multer configuration for handling file uploads
 
+//storing the details of task into the database file name "MakeMyWork/task"
+// Multer configuration for handling file uploads
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, 'uploads/') // Directory where uploaded files will be stored
@@ -128,6 +129,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Handle POST request to '/postwork' for adding a task
+
 
 // Handle the POST request to add a task
 app.post("/postwork", upload.array('images', 5), async (req, res) => {

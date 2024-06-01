@@ -113,17 +113,19 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// Multer configuration for handling file uploads
 
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'uploads/') // Directory where uploaded files will be stored
-    },
-    filename: function (req, file, cb) {
-        cb(null, Date.now() + '-' + file.originalname) // Unique file name
-    }
-});
+//storing the details of task into the database file name "MakeMyWork/task"
+// Multer configuration for handling file uploads
+//app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+//const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//         cb(null, 'uploads/') // Directory where uploaded files will be stored
+//     },
+//     filename: function (req, file, cb) {
+//         cb(null, Date.now() + '-' + file.originalname) // Unique file name
+//     }
+// });
 
 const upload = multer({ storage: storage });
 
