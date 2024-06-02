@@ -50,7 +50,13 @@ To install this Project, follow these steps:
     npm i
     ```
 
-4. Open http://localhost:6969 with your browser to see the result.
+4. Start the node:
+
+    ```bash
+    npm start
+    ```
+
+ 4. Open http://localhost:6969 with your browser to see the result.
 
 ## Contributing:
 
