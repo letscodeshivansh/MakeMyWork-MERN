@@ -42,6 +42,9 @@ const SignUpInfoSchema = new mongoose.Schema({
     }
 });
 
+
+
+
 //for storing the task 
 const Task = mongoose.model('Task', taskSchema);
 

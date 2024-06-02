@@ -42,6 +42,9 @@ const SignUpInfoSchema = new mongoose.Schema({
     }
 });
 
+
+
+
 //for storing the task 
 const Task = mongoose.model('Task', taskSchema);
 
@@ -51,4 +54,4 @@ const SignUpInfo = mongoose.model("SignUpInfo", SignUpInfoSchema);
 module.exports = { Task, SignUpInfo };
 
 
-//gvg
+//mongodb://localhost:27017/
