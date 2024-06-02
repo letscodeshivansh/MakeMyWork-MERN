@@ -4,7 +4,7 @@
   "description": "<h1> MakeMyWork</h1>\r <br>\r <h2>Description: </h2>\r <br>",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./src/server.js"  
+    "start": "nodemon ./src/server.js"  // Added script for starting the server
   },
   "keywords": [],
   "author": "",
