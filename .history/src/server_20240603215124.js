@@ -148,15 +148,16 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Handle POST request to '/postwork' for adding a task
 app.post("/postwork", upload.array('images', 5), async (req, res) => {
     try {
+        console.log("Request Body:", req.body);
+        console.log("Uploaded Files:", req.files);
+
         const { title, description, deadline, price } = req.body;
 
-        // Get the URLs of uploaded images
         const imageUrls = req.files.map(file => '/uploads/' + file.filename);
+        console.log("Image URLs:", imageUrls);
 
-        // Create a new task with the provided data
         const taskAdded = new Task({
             title,
             description,
@@ -164,14 +165,13 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
             price,
             images: imageUrls
         });
+        console.log("Task to be Added:", taskAdded);
 
-        // Save the task to the database
         await taskAdded.save();
 
-        // Redirect to index.html upon successful task submission
         res.redirect("/index");
     } catch (error) {
-        console.error("Error adding task:", error); // Log any errors
+        console.error("Error adding task:", error);
         res.status(500).send("Error adding task");
     }
 });
