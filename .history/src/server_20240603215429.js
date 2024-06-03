@@ -155,7 +155,6 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
 
         // Get the URLs of uploaded images
         const imageUrls = req.files.map(file => '/uploads/' + file.filename);
-
         // Create a new task with the provided data
         const taskAdded = new Task({
             title,
@@ -164,6 +163,7 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
             price,
             images: imageUrls
         });
+        console.log("Task:", taskAdded); // Check if task object is correct
 
         // Save the task to the database
         await taskAdded.save();
