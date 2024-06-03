@@ -6,8 +6,7 @@ const path = require("path");
 const multer = require("multer");
 
 //adding dotenv file
-require('dotenv').config();
-
+require()
 //data collection link 
 const { Task, SignUpInfo } = require("./mongodb");
 

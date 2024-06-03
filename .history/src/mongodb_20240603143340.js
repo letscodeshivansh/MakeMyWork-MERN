@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 // Retrieve MongoDB connection URI from environment variable
 const mongoURI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/MakeMyWork";
 
-mongoose.connect(process.env.MONGODB_URI);
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
@@ -55,4 +54,6 @@ const Task = mongoose.model('Task', taskSchema);
 const SignUpInfo = mongoose.model("SignUpInfo", SignUpInfoSchema);
 
 module.exports = { Task, SignUpInfo };
-//get to your next step 
+
+
+//gvg
