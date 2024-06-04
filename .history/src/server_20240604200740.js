@@ -116,7 +116,7 @@ app.post("/login", async (req, res) => {
         // Check if the provided password matches the stored password
         if (user.floatingPassword === floatingPassword) {
             // If passwords match, redirect to the index page
-            res.render("index");
+            res.render("index", { tasks });
         } else {
             // If passwords don't match, render the login page with an error message
             res.status(401).render("login", { error: "Wrong Password" });

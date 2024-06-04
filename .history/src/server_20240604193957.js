@@ -143,6 +143,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// Handle POST request to '/postwork' for adding a task
 app.post("/postwork", upload.array('images', 5), async (req, res) => {
     try {
         const { title, description, deadline, price } = req.body;
@@ -162,17 +163,13 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
         // Save the task to the database
         await taskAdded.save();
 
-        // Fetch tasks again from MongoDB
-        const tasks = await Task.find();
-
-        // Render the index page with the updated tasks data
-        res.render("index", { tasks });
+        // Redirect to index.html upon successful task submission
+        res.render("index");
     } catch (error) {
         console.error("Error adding task:", error); // Log any errors
         res.status(500).send("Error adding task");
     }
 });
-
 
 // Add a route to render job cards on the index page
 app.get('/jobcards', async (req, res) => {
@@ -185,6 +182,19 @@ app.get('/jobcards', async (req, res) => {
         res.status(500).send("Error fetching tasks");
     }
 });
+
+// Route to render the index page with job cards
+app.get("/index", async (req, res) => {
+    try {
+        // Retrieve tasks from MongoDB
+        const tasks = await Task.find();
+        res.render("index", { tasks }); // Pass tasks data to the index.ejs template
+    } catch (error) {
+        console.error("Error fetching tasks:", error);
+        res.status(500).send("Error fetching tasks");
+    }
+});
+
 
 //Listening on the port 
 const port = 6969;

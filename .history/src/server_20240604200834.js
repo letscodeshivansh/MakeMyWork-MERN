@@ -93,7 +93,7 @@ app.post("/signup", async (req, res) => {
         // Save the SignUpInfo document to the database
         await signUpInfo.save();
         
-        res.render("index");
+        res.render("index", { tasks });
     } catch (error) {
         res.status(500).render("Error signing up");
     }

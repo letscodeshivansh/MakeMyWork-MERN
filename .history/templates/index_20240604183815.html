@@ -59,30 +59,14 @@
     <div class="container">
         <h2>Explore Work</h2>
         <div class="job-cards">
+          <% tasks.forEach(task => { %>
             <div class="card">
                 <div class="title">Create a fan using BLDC motor</div>
                 <div class="description">Learn how to build a fan using BLDC motor with this comprehensive tutorial.</div>
                 <div class="deadline">Deadline: 2024-06-30</div>
-                <div class="price">$0.69</div>
+                <div class="price" font-bold >$0.69</div>
             </div>
-            <div class="card">
-                <div class="title">Need help in chat bot preparation</div>
-                <div class="description">Looking for assistance in preparing for chat bot development. Any help would be appreciated.</div>
-                <div class="deadline">Deadline: 2024-07-15</div>
-                <div class="price">$69.99</div>
-            </div>
-            <div class="card">
-                <div class="title">Looking for any frontend developer</div>
-                <div class="description">Company seeking a skilled frontend developer to join our team. Apply now!</div>
-                <div class="deadline">Deadline: 2024-07-20</div>
-                <div class="price">$69.99</div>
-            </div>
-            <div class="card">
-                <div class="title">Make it more impressive guys</div>
-                <div class="description">Need some enhancements to make the project more impressive. Open for suggestions.</div>
-                <div class="deadline">Deadline: 2024-08-05</div>
-                <div class="price">$99.99</div>
-            </div>
+          <% }); %>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
