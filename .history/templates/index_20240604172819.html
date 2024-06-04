@@ -1,21 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MakeMyWork</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .title {
-            font-weight: bold;
-        }
-        .deadline {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="Navbar">
         <div class="logo">
             <img src="3.jpg" alt="">
@@ -23,8 +15,9 @@
         <div class="nav-items"><a href="index.html">Home</a></div>
         <div class="nav-items"><a href="#">About Us</a></div>
         <div class="nav-items"><a href="#">Service</a></div>
-        <div class="nav-items"><button type="button" class="btn btn-outline-info"><a href="#">Username</a></button></div>
+        <div class="nav-items"><button type="button" class="btn btn-outline-info"><a href="login.html">Login</a></button></div>
     </nav>
+
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -36,6 +29,8 @@
             <img src="1.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <p>Let's find perfect work for you !</p>
+              
+
               <button type="button" class="btn btn-outline-dark butn"><a href="postwork.html">Find Work</a></button>
             </div>
           </div>
@@ -43,6 +38,7 @@
             <img src="2.jpg" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
               <p>Get your work done at your price</p>
+              
               <button type="button" class="btn btn-outline-dark butn"><a href="postwork.html">Post Work</a></button>
             </div>
           </div>
@@ -55,38 +51,38 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-    </div>
-    <div class="container">
+      </div>
+      <div class="card-container">
         <h2>Explore Work</h2>
-        <div class="job-cards">
-            <div class="card">
-                <div class="title">Create a fan using BLDC motor</div>
-                <div class="description">Learn how to build a fan using BLDC motor with this comprehensive tutorial.</div>
-                <div class="deadline">Deadline: 2024-06-30</div>
-                <div class="price">$0.69</div>
-            </div>
-            <div class="card">
-                <div class="title">Need help in chat bot preparation</div>
-                <div class="description">Looking for assistance in preparing for chat bot development. Any help would be appreciated.</div>
-                <div class="deadline">Deadline: 2024-07-15</div>
-                <div class="price">$69.99</div>
-            </div>
-            <div class="card">
-                <div class="title">Looking for any frontend developer</div>
-                <div class="description">Company seeking a skilled frontend developer to join our team. Apply now!</div>
-                <div class="deadline">Deadline: 2024-07-20</div>
-                <div class="price">$69.99</div>
-            </div>
-            <div class="card">
-                <div class="title">Make it more impressive guys</div>
-                <div class="description">Need some enhancements to make the project more impressive. Open for suggestions.</div>
-                <div class="deadline">Deadline: 2024-08-05</div>
-                <div class="price">$99.99</div>
-            </div>
+        <div class="card">
+          <div class="image" style="background-image: url('../assets/download.jpeg');"></div>
+          <div class="content"><a href="#">Order condom and diaper at same time on medical shop</a></div>
+          <div class="price">$0.69</div>
         </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <div class="card">
+          <div class="image" style="background-image: url('../assets/1.jpg');"></div>
+          <div class="content"><a href="#">Wear a skirt and stand upside down</a></div>
+          <div class="price">$69.99</div>
+        </div>
+        <div class="card">
+          <div class="image" style="background-image: url('../assets/2.jpg');"></div>
+          <div class="content"><a href="#">Get yourself fucked by an old man</a></div>
+          <div class="price">$69.99</div>
+        </div>
+        <div class="card">
+          <div class="image" style="background-image: url('../assets/3.jpg');"></div>
+          <div class="content"><a href="#">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam corporis nobis laborum est veniam dolorum consequatur distinctio numquam voluptatem praesentium iure dicta nulla id, commodi dolores, veritatis cupiditate error doloribus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vel obcaecati itaque commodi corrupti atque neque ut porro, ex harum at laborum eum fugit ipsum molestias. Voluptatibus quam facere inventore?</a></div>
+          <div class="price">$99.99</div>
+        </div>
+
+
+
+      </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>
