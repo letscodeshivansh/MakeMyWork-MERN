@@ -16,7 +16,6 @@ body {
   display: grid;
   place-items: center;
   background-color: #ebebeb;
-  padding-top: 0px;
 }
 
 .title {
@@ -27,14 +26,13 @@ body {
   border: 8px solid #dddddd;
   border-radius: 24px;
   overflow: hidden;
-  
 }
 
 .name {
   display: flex;
   font-size: 32px;
   font-weight: 700;
-  padding: 6px 16px;
+  padding: 1px 16px;
   color: #7e7e7e;
   background-color: #ebebeb;
 }

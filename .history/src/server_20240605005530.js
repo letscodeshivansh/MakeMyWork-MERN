@@ -74,6 +74,8 @@ app.get("/chat.js", (req, res) => {
 });
 
 // Socket.io events
+))app.use(express.static(path.join(__dirname, 'public')
+
 let socketsConected = new Set()
 
 io.on('connection', onConnected)

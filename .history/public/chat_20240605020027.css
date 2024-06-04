@@ -16,7 +16,7 @@ body {
   display: grid;
   place-items: center;
   background-color: #ebebeb;
-  padding-top: 0px;
+  padding-top: 10;
 }
 
 .title {

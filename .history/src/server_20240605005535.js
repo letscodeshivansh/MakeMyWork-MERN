@@ -74,6 +74,7 @@ app.get("/chat.js", (req, res) => {
 });
 
 // Socket.io events
+
 let socketsConected = new Set()
 
 io.on('connection', onConnected)

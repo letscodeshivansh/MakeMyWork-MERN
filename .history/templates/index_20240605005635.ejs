@@ -22,7 +22,7 @@
         </div>
         <div class="nav-items"><a href="index.html">Home</a></div>
         <div class="nav-items"><a href="#">About Us</a></div>
-        <div class="nav-items"><a href="#">Service</a></div>
+        <div class="nav-items"><a href="">Service</a></div>
         <div class="nav-items"><button type="button" class="btn btn-outline-info"><a href="#">Username</a></button></div>
     </nav>
     <div id="carouselExampleCaptions" class="carousel slide">
@@ -60,16 +60,15 @@
         <h2>Explore Work</h2>
         <div class="job-cards">
           <% tasks.forEach(task => { %>
-            <div class="card">
+          <div class="card">
               <div class="image" style="background-image: url('<%= task.images[0] %>');"></div>
               <div class="title"><%= task.title %></div>
               <div class="description"><%= task.description %></div>
               <div class="deadline"><%= task.deadline %></div>
               <div class="price">$<%= task.price %></div>
-              <button class="chat-button"><a href="chat.html"></a>Chat</button>
-            </div>
+          </div>
           <% }); %>
-        </div>        
+      </div>
       
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
