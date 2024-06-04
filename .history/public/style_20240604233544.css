@@ -50,7 +50,9 @@ button.btn.btn-outline-dark a{
 }
 .card-container{
     margin-top: 95px;
+<<<<<<< Updated upstream
     padding: 0 5%;
+=======
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -58,6 +60,7 @@ button.btn.btn-outline-dark a{
     text-align: left;
     font-size: 69px;
     margin: 45px 20px;
+>>>>>>> Stashed changes
 }
 .card {
     display: grid;
@@ -68,6 +71,7 @@ button.btn.btn-outline-dark a{
     border: 1px solid #ddd;
     padding: 10px;
     box-sizing: border-box;
+<<<<<<< Updated upstream
     transition: box-shadow 0.3s ease;
     margin-bottom: 20px;
 }
@@ -76,11 +80,13 @@ button.btn.btn-outline-dark a{
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
   
+=======
     margin-bottom: 10px;
 }
 .card:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
+>>>>>>> Stashed changes
 .card .image {
     grid-column: 1/2;
     width: 50px;

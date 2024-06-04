@@ -33,10 +33,7 @@ app.use(express.static(path.join(parentDir, "public")));
 app.use(express.static(path.join(parentDir, "assets")));
 
 
-app.get("/", (req, res) =>{
-    res.render("landing")
-});
-
+app.get("/", (req, res))
 // Routes
 app.get("/index", async (req, res) => {
     try {
@@ -104,7 +101,7 @@ app.post("/signup", async (req, res) => {
         // Save the SignUpInfo document to the database
         await signUpInfo.save();
         
-        res.redirect("/index");;
+        res.redirect("/");;
     } catch (error) {
         res.status(500).render("Error signing up");
     }
@@ -127,7 +124,7 @@ app.post("/login", async (req, res) => {
         // Check if the provided password matches the stored password
         if (user.floatingPassword === floatingPassword) {
             // If passwords match, redirect to the index page
-            res.redirect("/index");
+            res.redirect("/");
         } else {
             // If passwords don't match, render the login page with an error message
             res.status(401).render("login", { error: "Wrong Password" });

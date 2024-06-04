@@ -32,20 +32,9 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(parentDir, "public")));
 app.use(express.static(path.join(parentDir, "assets")));
 
-
-app.get("/", (req, res) =>{
-    res.render("landing")
-});
-
 // Routes
-app.get("/index", async (req, res) => {
-    try {
-      const tasks = await Task.find();
-      res.render("index.ejs", { tasks }); // Pass tasks data to the template
-    } catch (error) {
-      console.error("Error fetching tasks:", error.message);
-      res.status(500).send("Error fetching tasks");
-    }
+app.get("/", (req, res) => {
+    res.render("landing")
 });
 
 // Serve the login page
@@ -104,7 +93,7 @@ app.post("/signup", async (req, res) => {
         // Save the SignUpInfo document to the database
         await signUpInfo.save();
         
-        res.redirect("/index");;
+        res.render("index");
     } catch (error) {
         res.status(500).render("Error signing up");
     }
@@ -127,7 +116,7 @@ app.post("/login", async (req, res) => {
         // Check if the provided password matches the stored password
         if (user.floatingPassword === floatingPassword) {
             // If passwords match, redirect to the index page
-            res.redirect("/index");
+            res.render("index");
         } else {
             // If passwords don't match, render the login page with an error message
             res.status(401).render("login", { error: "Wrong Password" });
@@ -177,7 +166,7 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
         const tasks = await Task.find();
 
         // Render the index page with the updated tasks data
-        res.render("index", {tasks});
+        res.render("index", { tasks });
     } catch (error) {
         console.error("Error adding task:", error); // Log any errors
         res.status(500).send("Error adding task");
@@ -190,7 +179,7 @@ app.get('/jobcards', async (req, res) => {
     try {
         // Retrieve tasks from MongoDB
         const tasks = await Task.find();
-        res.render('index', {tasks}); // Pass tasks data to the index.ejs template
+        res.render('index', { tasks }); // Pass tasks data to the index.ejs template
     } catch (error) {
         console.error("Error fetching tasks:", error);
         res.status(500).send("Error fetching tasks");
