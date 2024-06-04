@@ -34,7 +34,7 @@ app.use(express.static(path.join(parentDir, "assets")));
 
 // Routes
 app.get("/", (req, res) => {
-    res.render("index")
+    res.render("/index")
 });
 
 // Add a route to serve the index.html file

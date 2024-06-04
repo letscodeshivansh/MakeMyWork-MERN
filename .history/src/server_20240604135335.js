@@ -34,12 +34,12 @@ app.use(express.static(path.join(parentDir, "assets")));
 
 // Routes
 app.get("/", (req, res) => {
-    res.render("index")
+    res.sendFile(path.join(parentDir, "templates", "index.html"));
 });
 
 // Add a route to serve the index.html file
 app.get("/index", (req, res) => {
-    res.render("index");
+    res.render("/index");
 });
 
 // Serve the login page
