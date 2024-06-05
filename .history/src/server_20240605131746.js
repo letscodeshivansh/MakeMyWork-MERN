@@ -40,16 +40,13 @@ app.get("/", (req, res) =>{
 // Routes
 app.get("/index", async (req, res) => {
     try {
-      const tasks = await Task.find(); // Fetch tasks data
-      const username = req.query.username; // Access username from query string (optional)
-  
-      res.render("index.ejs", { tasks, username }); // Pass data to the template
+      const tasks = await Task.find();
+      res.render("index.ejs", { tasks }); // Pass tasks data to the template
     } catch (error) {
       console.error("Error fetching tasks:", error.message);
       res.status(500).send("Error fetching tasks");
     }
 });
-  
 
 // Serve the login page
 app.get("/login", (req, res) => {

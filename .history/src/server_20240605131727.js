@@ -40,16 +40,13 @@ app.get("/", (req, res) =>{
 // Routes
 app.get("/index", async (req, res) => {
     try {
-      const tasks = await Task.find(); // Fetch tasks data
-      const username = req.query.username; // Access username from query string (optional)
-  
-      res.render("index.ejs", { tasks, username }); // Pass data to the template
+      const tasks = await Task.find();
+      res.render("index.ejs", { tasks }); // Pass tasks data to the template
     } catch (error) {
       console.error("Error fetching tasks:", error.message);
       res.status(500).send("Error fetching tasks");
     }
 });
-  
 
 // Serve the login page
 app.get("/login", (req, res) => {
@@ -142,8 +139,8 @@ app.post("/login", async (req, res) => {
         // If passwords match, extract username and redirect to index page
 
         const username = floatingInput.split('@')[0]; // Assuming you have a username field
-        res.redirect(`/index?username=${username}`);   // Pass username in query string
-                     
+        res.redirect(`/index?username=${username}`);
+                     // Pass username in query string
       } else {
         // If passwords don't match, render the login page with an error message
         res.status(401).render("login", { error: "Wrong Password" });
@@ -153,7 +150,7 @@ app.post("/login", async (req, res) => {
       console.error(error);
       res.status(500).send("Error logging in");
     }
-});
+  });
   
 
 

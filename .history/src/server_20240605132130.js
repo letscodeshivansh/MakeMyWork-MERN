@@ -48,7 +48,7 @@ app.get("/index", async (req, res) => {
       console.error("Error fetching tasks:", error.message);
       res.status(500).send("Error fetching tasks");
     }
-});
+  });
   
 
 // Serve the login page
