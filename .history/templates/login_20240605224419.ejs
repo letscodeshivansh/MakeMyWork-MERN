@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="style2.css" rel="stylesheet">
+
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="heading">
+        <h1>Login</h1>
+    </div>
+
+    <div class="container">
+        <form action="/login" method="post">
+            <div class="image">
+                <img src="3.jpeg" alt="LOGO">
+            </div>
+            <!-- Display error message if exists -->
+            <% if (typeof error !== 'undefined' && error !== null) { %>
+                <div class="alert alert-danger" role="alert">
+                    <%= error %>
+                </div>
+            <% } %>
+            <div class="form-floating mb-3">
+                <input type="name" class="form-control" name="username" placeholder="username...">
+                <label for="username">Username</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+                <label for="password">Password</label>
+            </div>
+            <div class="submit mb-3">
+                <button type="submit" class="btn btn-primary" onclick = "logging()" >login</button>
+            </div>
+            <div class="form-check form-switch ml-30">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                <label class="form-check-label" for="flexSwitchCheckChecked">Remember me <a href="#">Need Help?</a></label>
+            </div>
+            <div class="submit mb-3 td mt-20">
+                <button type="button" class="btn btn-primary"><a href="signup">Create New Account</a></button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script>
+    function logging(){
+        alert("Login Succesfully!");
+    }
+    </script>
+</body>
+</html>

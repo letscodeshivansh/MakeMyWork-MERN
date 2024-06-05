@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMyWork</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .title {
+            font-weight: bold;
+        }
+        .deadline {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="Navbar">
+        <div class="logo">
+            <img src="3.jpg" alt="">
+        </div>
+        <div class="nav-items"><a href="index.html">Home</a></div>
+        <div class="nav-items"><a href="#">About Us</a></div>
+        <div class="nav-items"><a href="#">Service</a></div>
+        <div class="nav-items"><button type="button" class="btn btn-outline-info"><a href="#">Hi, <%= username %>!</a></button></div>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Let's find perfect work for you !</p>
+              <button type="button" class="btn btn-outline-dark butn"><a href="#">Find Work</a></button>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <p>Get your work done at your price</p>
+              <button type="button" class="btn btn-outline-dark butn"><a href="/postwork">Post Work</a></button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container">
+      <br>
+      <h2>Explore Work</h2>
+      <br>
+      <div class="job-cards">
+          <% tasks.forEach(task => { %>
+              <div class="card">
+                  <div class="username"><%= username %></div> 
+                  <div class="image" style="background-image: url('<%= task.images[0] %>');"></div>
+                  <div class="title"><%= task.title %></div>
+                  <div class="description"><%= task.description %></div>
+                  <div class="deadline"><%= task.deadline %></div>
+                  <div class="price">$<%= task.price %></div>
+                  <button class="chat-button"><a href="chat.html">Chat</a></button>
+              </div>
+          <% }); %>
+      </div>
+  
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
