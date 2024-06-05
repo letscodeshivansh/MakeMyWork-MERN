@@ -1,0 +1,10 @@
+app.use(session({
+    secret: 'secretkey',
+    resave: false,
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 24 * 60 * 60 * 1000, // Set session cookie to expire in 24 hours
+        // You can add other cookie properties here if needed
+        // For example, setting secure: true if using HTTPS
+    }
+}));

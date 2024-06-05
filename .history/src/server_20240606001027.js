@@ -22,13 +22,9 @@ const parentDir = path.join(__dirname, '../'); // Parent directory
 // Using session as storage
 app.use(session({
     secret: 'secretkey',
-    resave: false,
+    resave: true,
     saveUninitialized: true,
-    cookie: {
-        maxAge: 24 * 60 * 60 * 1000, // Set session cookie to expire in 24 hours
-        // You can add other cookie properties here if needed
-        // For example, setting secure: true if using HTTPS
-    }
+    
 }));
 
 
@@ -52,23 +48,16 @@ app.get("/", (req, res) =>{
 });
 
 //routes
-// Route handler for rendering the index page
 app.get("/index", async (req, res) => {
     try {
-        // Fetch tasks from MongoDB
-        const tasks = await Task.find();
-
-        // Check if session exists and username property is set
-        const username = req.session.username;
-
-        // Render the index page with the tasks and username data
-        res.render("index", { tasks, username });
+        const tasks = await Task.find(); // Fetch tasks data
+        const username = req.session.username; // Access username from session
+        res.render("index", { tasks, username }); // Pass data to the template
     } catch (error) {
-        console.error("Error fetching tasks:", error);
+        console.error("Error fetching tasks:", error.message);
         res.status(500).send("Error fetching tasks");
     }
 });
-
 
 
 // app.get("/:username", async (req, res) => {
@@ -219,7 +208,7 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
         const tasks = await Task.find();
 
         // Render the index page with the updated tasks data
-        res.render("index", {tasks});
+        res.render("index", {tasks}, {username});
     } catch (error) {
         console.error("Error adding task:", error); // Log any errors
         res.status(500).send("Error adding task");

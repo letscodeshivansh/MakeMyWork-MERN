@@ -53,7 +53,7 @@ app.get("/", (req, res) =>{
 
 //routes
 // Route handler for rendering the index page
-app.get("/index", async (req, res) => {
+app.get("/", async (req, res) => {
     try {
         // Fetch tasks from MongoDB
         const tasks = await Task.find();
