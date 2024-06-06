@@ -11,31 +11,26 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     console.error("MongoDB connection error:", error);
   });
 
-
-  const taskSchema = new mongoose.Schema({
-    title: {
-      type: String,
-      required: true
-    },
-    description: {
-      type: String,
-      required: true
-    },
-    deadline: {
-      type: Date,
-      required: true
-    },
-    price: {
-      type: Number,
-      required: true
-    },
-    images: [{
-      type: String, // Assuming that we will store image URLs as strings
-    }],
-    username: {
-      type: String,
-      required: true
-    }
+const taskSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true
+  },
+  description: {
+    type: String,
+    required: true
+  },
+  deadline: {
+    type: Date,
+    required: true
+  },
+  price: {
+    type: Number,
+    required: true
+  },
+  images: [{
+    type: String , // Assuming that we will store image URLs as strings
+  }]
 });
 
 const userSchema = new mongoose.Schema({

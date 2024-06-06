@@ -36,7 +36,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
       type: String,
       required: true
     }
-});
+  });
 
 const userSchema = new mongoose.Schema({
   username: {
