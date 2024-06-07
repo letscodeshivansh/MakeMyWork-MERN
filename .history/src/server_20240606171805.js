@@ -21,6 +21,8 @@ app.use(session({
     saveUninitialized: true,
     cookie: {
         maxAge: 365 * 24 * 60 * 60 * 1000, // 1 year in milliseconds
+        // You can also add other cookie properties here if needed
+        // For example, setting secure: true if using HTTPS
     }
 }));
 
@@ -33,64 +35,54 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(parentDir, "public")));
 app.use(express.static(path.join(parentDir, "assets")));
 
-app.get("/", (req, res) => {
+app.get("/", (req, res) =>{
     res.render("landing")
 });
 
 app.get("/index", async (req, res) => {
     try {
         const tasks = await Task.find();
-        const loggedInUsername = req.session.loggedInUsername; // Username of the currently logged-in user
-        res.render("index", { tasks, loggedInUsername });
+        const username = req.session.username;
+        res.render("index", { tasks, username });
     } catch (error) {
         console.error("Error fetching tasks:", error);
         res.status(500).send("Error fetching tasks");
     }
 });
 
-app.get("/chat/:taskId", async (req, res) => {
-    try {
-        const taskId = req.params.taskId;
-        const task = await Task.findById(taskId);
-
-        if (!task) {
-            return res.status(404).send("Task not found");
-        }
-
-        const taskOwner = task.taskOwner;
-        res.render("chat", { taskOwner });
-    } catch (error) {
-        console.error("Error fetching task:", error);
-        res.status(500).send("Error fetching task");
-    }
+app.get("/chat", (req, res) => {
+    // Assuming you have the task owner's username stored in a variable called taskOwner
+    const taskOwner = req.session.username || "Anonymous"; // Get the username from the session or set it as "Anonymous"
+    res.render("chat", { taskOwner }); 
 });
+
 
 app.get("/chat.js", (req, res) => {
     res.sendFile(path.join(__dirname, "chat.js"));
 });
 
-let socketsConnected = new Set();
+let socketsConected = new Set()
 
-io.on('connection', onConnected);
+io.on('connection', onConnected)
 
 function onConnected(socket) {
-    console.log('Socket connected', socket.id);
-    socketsConnected.add(socket.id);
-    io.emit('clients-total', socketsConnected.size);
+    console.log('Socket connected', socket.id)
+    socketsConected.add(socket.id)
+    io.emit('clients-total', socketsConected.size)
 
     socket.on('disconnect', () => {
-        console.log('Socket disconnected', socket.id);
-        socketsConnected.delete(socket.id);
-        io.emit('clients-total', socketsConnected.size);
-    });
+        console.log('Socket disconnected', socket.id)
+        socketsConected.delete(socket.id)
+        io.emit('clients-total', socketsConected.size)
+    })
 
     socket.on('message', (data) => {
-        socket.broadcast.emit('chat-message', data);
-    });
+        socket.broadcast.emit('chat-message', data)
+    })
 
     socket.on('feedback', (data) => {
-        socket.broadcast.emit('feedback', data);
-    });
+        socket.broadcast.emit('feedback', data)
+    })
 }
 
 app.get("/login", (req, res) => {
@@ -106,7 +98,7 @@ app.post("/login", async (req, res) => {
             return res.status(401).render("login", { error: "Invalid username or password" });
         }
 
-        req.session.loggedInUsername = username;
+        req.session.username = username;
         res.redirect("/index");
     } catch (error) {
         console.error(error);
@@ -130,7 +122,7 @@ app.post("/signup", async (req, res) => {
         const newUser = new User({ username, password });
         await newUser.save();
 
-        req.session.loggedInUsername = username;
+        req.session.username = username;
         res.redirect("/index");
     } catch (error) {
         console.error(error);
@@ -138,7 +130,7 @@ app.post("/signup", async (req, res) => {
     }
 });
 
-const upload = multer({
+const upload = multer({ 
     storage: multer.diskStorage({
         destination: function (req, file, cb) {
             cb(null, 'uploads/')
@@ -153,20 +145,21 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
     try {
         const { title, description, deadline, price } = req.body;
         const imageUrls = req.files.map(file => '/uploads/' + file.filename);
-        const taskOwner = req.session.loggedInUsername;
-
+        const username = req.session.username;
+        const taskOwner = req.session.username; // Get the task owner's username
         const taskAdded = new Task({
             title,
-            description,
+            d escription,
             deadline,
             price,
             images: imageUrls,
-            taskOwner // Use req.session.loggedInUsername as task owner
+            taskOwner: taskOwner // Ensure taskOwner is stored with the task
         });
+
 
         await taskAdded.save();
         const tasks = await Task.find();
-        res.render("index", { tasks, loggedInUsername: taskOwner }); // Pass username when rendering index
+        res.render("index", { tasks, username }); // Pass username when rendering index
     } catch (error) {
         console.error("Error adding task:", error);
         res.status(500).send("Error adding task");
@@ -176,8 +169,8 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
 app.get("/postwork", async (req, res) => {
     try {
         const tasks = await Task.find();
-        const loggedInUsername = req.session.loggedInUsername;
-        res.render("postwork", { tasks, loggedInUsername });
+        const username = req.session.username;
+        res.render("postwork", { tasks, username });
     } catch (error) {
         console.error("Error fetching tasks:", error);
         res.status(500).send("Error fetching tasks");
@@ -188,3 +181,5 @@ const port = 6969;
 server.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+//add

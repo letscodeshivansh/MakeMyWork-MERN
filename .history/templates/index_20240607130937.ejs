@@ -23,8 +23,8 @@
         <div class="nav-items"><a href="index.html">Home</a></div>
         <div class="nav-items"><a href="#">About Us</a></div>
         <div class="nav-items"><a href="#">Service</a></div>
-        <div class="nav-items"><button type="button" class="btn btn-outline-info"><a href="#">Hi, <% if (typeof loggedInUsername !== 'undefined' && loggedInUsername) { %>
-          <p><%= loggedInUsername %> </p>
+        <div class="nav-items"><button type="button" class="btn btn-outline-info"><a href="#">Hi, <% if (typeof loggedInUsername !== 'undefined' && username) { %>
+          <p><%= username %> </p>
         <% } %></a></button></div>
     </nav>
     <div id="carouselExampleCaptions" class="carousel slide">
@@ -71,7 +71,7 @@
                   <div class="description"><%= task.description %></div>
                   <div class="deadline"><%= task.deadline %></div>
                   <div class="price">$<%= task.price %></div>
-                  <button class="chat-button"><a href="/chat/<%= task._id %>">Chat</a></button>
+                  <button class="chat-button"><a href="chat">Chat</a></button>
                   <% if (loggedInUsername === task.taskOwner) { %>
                       <button class="edit-button">Edit</button>
                   <% } %>

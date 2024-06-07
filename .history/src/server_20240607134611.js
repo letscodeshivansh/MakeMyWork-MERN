@@ -31,7 +31,7 @@ app.set("views", path.join(parentDir, "templates"));
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(parentDir, "public")));
-app.use(express.static(path.join(parentDir, "assets")));
+app.use('/assets', express.static(path.join(parentDir, "assets")));
 
 app.get("/", (req, res) => {
     res.render("landing")

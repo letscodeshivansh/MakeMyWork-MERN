@@ -32,7 +32,7 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     images: [{
       type: String, // Assuming that we will store image URLs as strings
     }],
-    taskOwner: {
+    usernametaskOwner: {
       type: String,
       required: true
     }

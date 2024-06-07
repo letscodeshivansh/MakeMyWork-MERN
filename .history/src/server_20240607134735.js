@@ -34,8 +34,7 @@ app.use(express.static(path.join(parentDir, "public")));
 app.use(express.static(path.join(parentDir, "assets")));
 
 app.get("/", (req, res) => {
-    res.render("landing")
-});
+    res.render("landing")});
 
 app.get("/index", async (req, res) => {
     try {

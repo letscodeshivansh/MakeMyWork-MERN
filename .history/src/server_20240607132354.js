@@ -34,7 +34,7 @@ app.use(express.static(path.join(parentDir, "public")));
 app.use(express.static(path.join(parentDir, "assets")));
 
 app.get("/", (req, res) => {
-    res.render("landing")
+    res.render("landing");
 });
 
 app.get("/index", async (req, res) => {
@@ -141,10 +141,10 @@ app.post("/signup", async (req, res) => {
 const upload = multer({
     storage: multer.diskStorage({
         destination: function (req, file, cb) {
-            cb(null, 'uploads/')
+            cb(null, 'uploads/');
         },
         filename: function (req, file, cb) {
-            cb(null, Date.now() + '-' + file.originalname)
+            cb(null, Date.now() + '-' + file.originalname);
         }
     })
 });
@@ -153,7 +153,7 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
     try {
         const { title, description, deadline, price } = req.body;
         const imageUrls = req.files.map(file => '/uploads/' + file.filename);
-        const taskOwner = req.session.loggedInUsername;
+        const taskOwner = req.session.loggedInUsername; // Get the logged-in user's name for taskOwner
 
         const taskAdded = new Task({
             title,
@@ -161,12 +161,13 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
             deadline,
             price,
             images: imageUrls,
-            taskOwner // Use req.session.loggedInUsername as task owner
+            taskOwner
         });
 
         await taskAdded.save();
         const tasks = await Task.find();
-        res.render("index", { tasks, loggedInUsername: taskOwner }); // Pass username when rendering index
+        const loggedInUsername = req.session.loggedInUsername; // Ensure this is passed correctly
+        res.render("index", { tasks, loggedInUsername });
     } catch (error) {
         console.error("Error adding task:", error);
         res.status(500).send("Error adding task");
