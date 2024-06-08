@@ -142,9 +142,10 @@ button.btn.btn-outline-dark a{
     height: 44px;
 }
 
-/* .chat-button:hover {
-    background-color: #0056b3;
-} */
+.chat-button img.chat-icon:hover {
+    width: 54px;
+    height: 54px;
+}
 
 .edit-button{
     grid-column: 10/11;
