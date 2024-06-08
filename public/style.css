@@ -108,10 +108,45 @@ button.btn.btn-outline-dark a{
 .card .price{
     grid-column: 9/10;
     text-align :center;
-    padding : 10px;
+    padding-left : 50%;
+    padding-bottom : 8%;
+    font-weight: 700;
 }
 .card .chat-button{
     grid-column: 10/11;
     text-align :center;
-    padding : 10px;
+    padding-left : 40%;
+}
+.chat-button {
+    display: flex;
+    align-items: right;
+    /* background-color: #007bff; */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: right;
+    text-decoration: none;
+}
+
+.chat-button a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.chat-button img.chat-icon {
+    width: 44px;
+    height: 44px;
+}
+
+/* .chat-button:hover {
+    background-color: #0056b3;
+} */
+
+.edit-button{
+    grid-column: 10/11;
+    border-radius: 10px;
 }

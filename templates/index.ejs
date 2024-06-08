@@ -75,7 +75,11 @@
                   <div class="description"><%= task.description %></div>
                   <div class="deadline"><%= task.deadline %></div>
                   <div class="price">$<%= task.price %></div>
-                  <button class="chat-button"><a href="/chat/<%= task._id %>">Chat</a></button>
+                  <span class="chat-button">
+                    <a href="/chat/<%= task._id %>">
+                        <img src="chat-icon.jpg" alt="Chat Icon" class="chat-icon"> 
+                    </a>
+                </span>
                   <% if (loggedInUsername === task.taskOwner) { %>
                       <button class="edit-button">Edit</button>
                   <% } %>
