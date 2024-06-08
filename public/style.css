@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(240, 248, 255, 0.718);
+    background-color: rgb(238, 232, 232);;
 }
 .Navbar{
     display: grid;
@@ -16,20 +16,23 @@ body{
 }
 .nav-items{
     margin: auto;
-    font-weight: 400;
+    font-weight: 450;
     font-size: 25px;
 }
 .nav-items button a{
     text-decoration: none;
     color: #0dcaf0;
 }
+.nav-items button:hover{
+    text-decoration: none;
+    background-color: rgba(240, 248, 255, 0.718);
+}
 .nav-items a{
     text-decoration: none;
     color: black;
 }
 .nav-items a:hover:not(.exclude-hover){
-    font-weight: 500;
-    /* text-decoration: underline; */
+    font-weight: 550;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .nav-items button:hover{
@@ -81,7 +84,11 @@ button.btn.btn-outline-dark a{
 }
   
 .card:hover {
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 
+        6px 6px 6px rgba(0, 0, 0, 0.2),
+        -6px 6px 6px rgba(0, 0, 0, 0.2),
+        6px -6px 6px rgba(0, 0, 0, 0.2),  
+        -6px -6px 6px rgba(0, 0, 0, 0.2);
 }
 .card .image {
     grid-column: 1/2;
