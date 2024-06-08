@@ -17,7 +17,7 @@ body{
 .nav-items{
     margin: auto;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 25px;
 }
 .nav-items button a{
     text-decoration: none;
@@ -26,6 +26,11 @@ body{
 .nav-items a{
     text-decoration: none;
     color: black;
+}
+.nav-items a:hover:not(.exclude-hover){
+    font-weight: 500;
+    /* text-decoration: underline; */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .nav-items button:hover{
     text-decoration: none;
@@ -75,9 +80,6 @@ button.btn.btn-outline-dark a{
     margin-bottom: 20px;
 }
   
-.card:hover {
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
 .card:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
