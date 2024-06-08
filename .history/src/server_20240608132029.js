@@ -184,30 +184,6 @@ app.get("/postwork", async (req, res) => {
     }
 });
 
-app.get("/chatroom", async (req, res) => {
-    const loggedInUsername = req.session.loggedInUsername;
-
-    try {
-        // Fetch all messages where the logged-in user is either the sender or recipient
-        const conversations = await Message.find({
-            $or: [{ sender: loggedInUsername }, { recipient: loggedInUsername }]
-        }).distinct('taskId');
-
-        // Get task details for these conversations
-        const conversationTasks = await Task.find({
-            _id: { $in: conversations }
-        });
-
-        res.render("chatroom", {
-            loggedInUsername,
-            conversationTasks
-        });
-    } catch (error) {
-        console.error('Error fetching task or messages:', error);
-        res.status(500).send('Error fetching task or messages');
-    }
-});
-
 const port = 6969;
 server.listen(port, () => {
     console.log(`Server is running on port ${port}`);

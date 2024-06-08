@@ -25,9 +25,7 @@
         <div class="nav-items"><a href="#">Service</a></div>
         <div class="nav-items"><button type="button" class="btn btn-outline-info"><a href="#">Hi, <% if (typeof loggedInUsername !== 'undefined' && loggedInUsername) { %>
           <p><%= loggedInUsername %> </p>
-        <% } %></a></button>
-        <div class="nav-items"><button type="button" class="btn btn-outline-info"><a href="chatroom">ChatRoom</a></button></div>
-      </div>
+        <% } %></a></button></div>
     </nav>
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
@@ -60,7 +58,7 @@
           <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="container">
+    <div class="card-container">
       <br>
       <h2>Explore Work</h2>
       <br>
@@ -80,7 +78,7 @@
               </div>
           <% }); %>
       </div>
-    </div>
+  </div>
   
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
