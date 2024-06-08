@@ -55,12 +55,12 @@ body{
 }
 
 .carousel-item img {
-    height: 100%;
+    height: 500px;
     width: auto; /* Ensure the image scales proportionally */
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 200px;
     object-fit: contain; /* Ensures the full image is displayed */
     border-radius: 5%;
 }

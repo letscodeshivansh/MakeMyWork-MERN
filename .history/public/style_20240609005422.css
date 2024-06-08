@@ -60,7 +60,7 @@ body{
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 10px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     object-fit: contain; /* Ensures the full image is displayed */
     border-radius: 5%;
 }

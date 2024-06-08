@@ -54,17 +54,25 @@ body{
     color: black;
 }
 
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
 .carousel-item img {
-    height: 100%;
-    width: auto; /* Ensure the image scales proportionally */
+    height: 500px;
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 10px;
-    padding-bottom: 20px;
-    object-fit: contain; /* Ensures the full image is displayed */
+    object-fit: cover;
     border-radius: 5%;
+    background: url('landing.jpg') no-repeat 50% 50%;
 }
-
 .carousel-item p{
     color: black;
     font-size: 30px;

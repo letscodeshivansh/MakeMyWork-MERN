@@ -10,15 +10,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px; /* Set the width as per your requirement */
-    height: 80px; /* Same as width to maintain 1:1 aspect ratio */
+    width: 200px; /* Set the width as per your requirement */
+    height: 200px; /* Same as width to maintain 1:1 aspect ratio */
     overflow: hidden;
-    border-radius: 0%; /* Make the container circular if needed */
-    background: url('logo.png') no-repeat center center;
-    background-size: 150px 150px; /* Adjust the size as needed */
+    border-radius: 50%; /* Make the container circular if needed */
+    background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    grid-column: 1 / 6;
+    grid
 }
+
 .logo {
     width: 100%;
     height: auto;
@@ -53,21 +53,13 @@ body{
     text-decoration: none;
     color: black;
 }
-
 .carousel-item img {
-    height: 100%;
-    width: auto; /* Ensure the image scales proportionally */
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    object-fit: contain; /* Ensures the full image is displayed */
-    border-radius: 5%;
+    height: 500px;
+    object-fit: cover;
 }
-
 .carousel-item p{
     color: black;
-    font-size: 30px;
+    font-size: 60px;
     font-weight: 450;
 }
 button.btn.btn-outline-dark a{

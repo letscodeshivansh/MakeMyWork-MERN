@@ -57,8 +57,8 @@ body{
 .carousel-item img {
     height: 100%;
     width: auto; /* Ensure the image scales proportionally */
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 1px;
+    padding-right: 2px;
     padding-top: 10px;
     padding-bottom: 20px;
     object-fit: contain; /* Ensures the full image is displayed */
