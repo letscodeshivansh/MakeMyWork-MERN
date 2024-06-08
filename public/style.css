@@ -59,6 +59,15 @@ button.btn.btn-outline-dark a{
 .btn-outline-info:active{
     color: black;
 }
+.butn:hover{
+    background-color: transparent;
+    box-shadow:
+    6px 6px 6px rgba(0, 0, 0, 0.2),
+    -6px 6px 6px rgba(0, 0, 0, 0.2),
+    6px -6px 6px rgba(0, 0, 0, 0.2),  
+    -6px -6px 6px rgba(0, 0, 0, 0.2);
+    font-weight: 550;
+}
 .card-container{
     margin-top: 95px;
     padding: 0 5%;
@@ -106,6 +115,7 @@ button.btn.btn-outline-dark a{
     grid-column: 2/4;
     text-align :center;
     padding : 10px;
+    font-weight: bold;
 }
 .card .description{
     grid-column: 4/8;
@@ -116,6 +126,7 @@ button.btn.btn-outline-dark a{
     grid-column: 8/9;
     text-align :center;
     padding : 10px;
+    font-weight: bold;
 }
 .card .price{
     grid-column: 9/10;
@@ -161,5 +172,9 @@ button.btn.btn-outline-dark a{
 
 .edit-button{
     grid-column: 10/11;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+.edit-button:hover{
+    background-color: rgba(240, 248, 255, 0.718);
+    font-weight: 600;
 }
