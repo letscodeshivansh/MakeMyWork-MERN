@@ -62,6 +62,12 @@ To install this Project, follow these steps:
 
 We welcome contributions from developers, designers, and enthusiasts who are passionate about improving MakeMyWork. Feel free to fork the repository, make your changes, and submit pull requests. Together, we can make MakeMyWork even better!
 
+## Contributors: 
+
+- Shivansh Srivastava
+- Karanveer Singh
+- Parth Sauguny
+
 
 ## License
 
