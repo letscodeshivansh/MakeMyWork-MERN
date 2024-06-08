@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(238, 232, 232);;
+    background-color: #efdfdf66;
 }
 .Navbar{
     display: grid;
@@ -90,6 +90,8 @@ button.btn.btn-outline-dark a{
     box-sizing: border-box;
     transition: box-shadow 0.3s ease;
     margin-bottom: 20px;
+    background: linear-gradient(-20deg, #eb9eae85, #feb47b96);
+    border-radius: 15px;
 }
   
 .card:hover {
@@ -143,11 +145,7 @@ button.btn.btn-outline-dark a{
 .chat-button {
     display: flex;
     align-items: right;
-    /* background-color: #007bff; */
     color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
     cursor: pointer;
     text-align: right;
     text-decoration: none;
@@ -163,6 +161,7 @@ button.btn.btn-outline-dark a{
 .chat-button img.chat-icon {
     width: 44px;
     height: 44px;
+    border-radius: 50%;
 }
 
 .chat-button img.chat-icon:hover {
