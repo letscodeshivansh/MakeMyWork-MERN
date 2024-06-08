@@ -10,7 +10,7 @@
 
 ## Introduction:
 
- MakeMyWork is a unique platform designed to bridge the gap between individuals seeking tasks to be completed and those looking to earn money by offering their skills and services in their free time. Unlike traditional job boards, MakeMyWork operates as a freelancing marketplace where users can post various tasks they need assistance with, ranging from small errands to specialized services, and connect with capable individuals willing to undertake these tasks for a fee.
+ MakeMyWork is a unique platform designed to bridge the gap between individuals seeking tasks to be completed and those looking to earn money by offering their skills and services in their free time. Unlike traditional job boards, MakeMyWork operates as a freelancing marketplace where users can post various tasks for they need assistance with, ranging from small errands to specialized services, and connect with capable individuals who are willing to undertake these tasks for a fee.
 <br>
 
 ## Features:

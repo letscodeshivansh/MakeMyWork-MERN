@@ -1,3 +1,6 @@
+body{
+    background-color: #efdfdf66;
+}
 .Navbar{
     display: grid;
     grid-template-columns: repeat(9,1fr);
@@ -13,16 +16,24 @@
 }
 .nav-items{
     margin: auto;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 450;
+    font-size: 25px;
 }
 .nav-items button a{
     text-decoration: none;
     color: #0dcaf0;
 }
+.nav-items button:hover{
+    text-decoration: none;
+    background-color: rgba(240, 248, 255, 0.718);
+}
 .nav-items a{
     text-decoration: none;
     color: black;
+}
+.nav-items a:hover:not(.exclude-hover){
+    font-weight: 550;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .nav-items button:hover{
     text-decoration: none;
@@ -48,6 +59,15 @@ button.btn.btn-outline-dark a{
 .btn-outline-info:active{
     color: black;
 }
+.butn:hover{
+    background-color: transparent;
+    box-shadow:
+    6px 6px 6px rgba(0, 0, 0, 0.2),
+    -6px 6px 6px rgba(0, 0, 0, 0.2),
+    6px -6px 6px rgba(0, 0, 0, 0.2),  
+    -6px -6px 6px rgba(0, 0, 0, 0.2);
+    font-weight: 550;
+}
 .card-container{
     margin-top: 95px;
     padding: 0 5%;
@@ -70,13 +90,16 @@ button.btn.btn-outline-dark a{
     box-sizing: border-box;
     transition: box-shadow 0.3s ease;
     margin-bottom: 20px;
+    background: linear-gradient(-20deg, #eb9eae85, #feb47b96);
+    border-radius: 15px;
 }
   
 .card:hover {
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-.card:hover {
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 
+        6px 6px 6px rgba(0, 0, 0, 0.2),
+        -6px 6px 6px rgba(0, 0, 0, 0.2),
+        6px -6px 6px rgba(0, 0, 0, 0.2),  
+        -6px -6px 6px rgba(0, 0, 0, 0.2);
 }
 .card .image {
     grid-column: 1/2;
@@ -94,6 +117,8 @@ button.btn.btn-outline-dark a{
     grid-column: 2/4;
     text-align :center;
     padding : 10px;
+    font-weight: bold;
+    font-size: 25px;
 }
 .card .description{
     grid-column: 4/8;
@@ -104,14 +129,52 @@ button.btn.btn-outline-dark a{
     grid-column: 8/9;
     text-align :center;
     padding : 10px;
+    font-weight: bold;
 }
 .card .price{
     grid-column: 9/10;
     text-align :center;
-    padding : 10px;
+    padding-left : 50%;
+    padding-bottom : 8%;
+    font-weight: 700;
 }
 .card .chat-button{
     grid-column: 10/11;
     text-align :center;
-    padding : 10px;
+    padding-left : 40%;
+}
+.chat-button {
+    display: flex;
+    align-items: right;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    text-decoration: none;
+}
+
+.chat-button a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.chat-button img.chat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.chat-button img.chat-icon:hover {
+    width: 54px;
+    height: 54px;
+}
+
+.edit-button{
+    grid-column: 10/11;
+    border-radius: 5px;
+}
+.edit-button:hover{
+    background-color: rgba(240, 248, 255, 0.718);
+    font-weight: 600;
 }
