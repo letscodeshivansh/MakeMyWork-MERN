@@ -118,6 +118,7 @@ button.btn.btn-outline-dark a{
     text-align :center;
     padding : 10px;
     font-weight: bold;
+    font-size: 25px;
 }
 .card .description{
     grid-column: 4/8;
