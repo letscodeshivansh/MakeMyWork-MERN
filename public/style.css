@@ -41,7 +41,8 @@ body{
 }
 .carousel-item img {
     height: 500px;
-    object-fit: cover;
+    width: 100%;  
+    object-fit: contain;
 }
 .carousel-item p{
     color: black;
