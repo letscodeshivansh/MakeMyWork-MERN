@@ -114,8 +114,8 @@ app.post("/login", async (req, res) => {
     }
 });
 
-app.get("/aboutus", (req, res) => {
-    res.render("aboutus");
+app.get("/signup", (req, res) => {
+    res.render("signup");
 });
 
 app.get("/signup", (req, res) => {
@@ -165,7 +165,7 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
             deadline,
             price,
             images: imageUrls,
-            taskOwner // Using req.session.loggedInUsername as task owner
+            taskOwner // Use req.session.loggedInUsername as task owner
         });
 
         await taskAdded.save();
