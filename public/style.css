@@ -1,105 +1,126 @@
-body{
-    background-color: #efdfdf66;
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-.Navbar{
-    display: grid;
-    grid-template-columns: repeat(9,1fr);
-    padding: 30px;
+
+body {
+    position: relative;
 }
+
+.first-page {
+    height: 110vh;
+    background: url('LandingPage.jpg') no-repeat center top/cover;
+    display: flex;
+    padding-left: 40px;
+}
+
+.black-bg {
+    background-color: black;
+    color: white;
+    min-height: 100vh; 
+    padding-top: 40vh; 
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 .logo-container {
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 80px; /* Set the width as per your requirement */
     height: 80px; /* Same as width to maintain 1:1 aspect ratio */
     overflow: hidden;
-    border-radius: 0%; /* Make the container circular if needed */
     background: url('logo.png') no-repeat center center;
     background-size: 150px 150px; /* Adjust the size as needed */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     grid-column: 1 / 6;
 }
+
 .logo {
     width: 100%;
     height: auto;
     object-fit: contain;
-    /* Centering the rectangular logo */
     display: block;
     margin: auto;
 }
 
-.nav-items{
-    margin: auto;
+.nav-items {
+    margin:50px 50px;
     font-weight: 450;
     font-size: 25px;
 }
-.nav-items button a{
+
+.nav-items button a {
     text-decoration: none;
-    color: #0dcaf0;
+    color: #ff4154;
+    font-size: 15px;
 }
-.nav-items button:hover{
+
+.nav-items button:hover {
     text-decoration: none;
     background-color: rgba(240, 248, 255, 0.718);
 }
-.nav-items a{
+
+.nav-items a {
     text-decoration: none;
-    color: black;
+    color: white; /* Adjusted for better visibility on background image */
 }
-.nav-items a:hover:not(.exclude-hover){
+
+.nav-items a:hover:not(.exclude-hover) {
     font-weight: 550;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-.nav-items button:hover{
-    text-decoration: none;
-    color: black;
-}
 
+.Explore-Work{
+    position: absolute;
+    top: 93%;
+}
 .carousel-item img {
     height: 500px;
     width: 100%;  
     object-fit: contain;
-    height: 100%;
-    width: auto;
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 10px;
     padding-bottom: 20px;
-    object-fit: contain;
     border-radius: 5%;
 }
 
-.carousel-item p{
+.carousel-item p {
     color: black;
     font-size: 30px;
     font-weight: 450;
 }
-button.btn.btn-outline-dark a{
+
+button.btn.btn-outline-dark a {
     font-size: 55px;
     text-decoration: none;
     color: black;
 }
-.btn-outline-info:hover{
+
+.btn-outline-info:hover {
     color: black;
 }
-.btn-outline-info:active{
+
+.btn-outline-info:active {
     color: black;
 }
-.butn:hover{
+
+.butn:hover {
     background-color: transparent;
     box-shadow:
-    6px 6px 6px rgba(0, 0, 0, 0.2),
-    -6px 6px 6px rgba(0, 0, 0, 0.2),
-    6px -6px 6px rgba(0, 0, 0, 0.2),  
-    -6px -6px 6px rgba(0, 0, 0, 0.2);
+        15px 15px 15px rgba(0, 0, 0, 0.2),
+        -15px 15px 15px rgba(0, 0, 0, 0.2),
+        15px -15px 15px rgba(0, 0, 0, 0.2),  
+        -15px -15px 15px rgba(0, 0, 0, 0.2);
     font-weight: 550;
 }
-.card-container{
-    margin-top: 95px;
-    padding: 0 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.card-container h2{
+
+.black-bg h2{
     text-align: left;
     font-size: 69px;
     margin: 45px 20px;
@@ -121,10 +142,10 @@ button.btn.btn-outline-dark a{
   
 .card:hover {
     box-shadow: 
-        6px 6px 6px rgba(0, 0, 0, 0.2),
-        -6px 6px 6px rgba(0, 0, 0, 0.2),
-        6px -6px 6px rgba(0, 0, 0, 0.2),  
-        -6px -6px 6px rgba(0, 0, 0, 0.2);
+        6px 6px 6px rgba(221, 221, 221, 0.2),
+        -6px 6px 6px rgba(200, 200, 200, 0.2),
+        6px -6px 6px rgba(255, 255, 255, 0.2),  
+        -6px -6px 6px rgba(215, 215, 215, 0.2);
 }
 .card .image {
     grid-column: 1/2;
