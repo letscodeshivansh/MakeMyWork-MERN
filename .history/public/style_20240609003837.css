@@ -1,0 +1,194 @@
+body{
+    background-color: #efdfdf66;
+}
+.Navbar{
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    padding: 30px;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px; /* Set the width as per your requirement */
+    height: 80px; /* Same as width to maintain 1:1 aspect ratio */
+    overflow: hidden;
+    border-radius: 0%; /* Make the container circular if needed */
+    background: url('logo.png') no-repeat center center;
+    background-size: 150px 150px; /* Adjust the size as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    grid-column: 1 / 6;
+}
+.logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    /* Centering the rectangular logo */
+    display: block;
+    margin: auto;
+}
+
+.nav-items{
+    margin: auto;
+    font-weight: 450;
+    font-size: 25px;
+}
+.nav-items button a{
+    text-decoration: none;
+    color: #0dcaf0;
+}
+.nav-items button:hover{
+    text-decoration: none;
+    background-color: rgba(240, 248, 255, 0.718);
+}
+.nav-items a{
+    text-decoration: none;
+    color: black;
+}
+.nav-items a:hover:not(.exclude-hover){
+    font-weight: 550;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.nav-items button:hover{
+    text-decoration: none;
+    color: black;
+}
+.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+}
+.carousel-item p{
+    color: black;
+    font-size: 60px;
+    font-weight: 450;
+}
+button.btn.btn-outline-dark a{
+    font-size: 55px;
+    text-decoration: none;
+    color: black;
+}
+.btn-outline-info:hover{
+    color: black;
+}
+.btn-outline-info:active{
+    color: black;
+}
+.butn:hover{
+    background-color: transparent;
+    box-shadow:
+    6px 6px 6px rgba(0, 0, 0, 0.2),
+    -6px 6px 6px rgba(0, 0, 0, 0.2),
+    6px -6px 6px rgba(0, 0, 0, 0.2),  
+    -6px -6px 6px rgba(0, 0, 0, 0.2);
+    font-weight: 550;
+}
+.card-container{
+    margin-top: 95px;
+    padding: 0 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.card-container h2{
+    text-align: left;
+    font-size: 69px;
+    margin: 45px 20px;
+}
+.card {
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    background: linear-gradient(-20deg, #eb9eae85, #feb47b96);
+    border-radius: 15px;
+}
+  
+.card:hover {
+    box-shadow: 
+        6px 6px 6px rgba(0, 0, 0, 0.2),
+        -6px 6px 6px rgba(0, 0, 0, 0.2),
+        6px -6px 6px rgba(0, 0, 0, 0.2),  
+        -6px -6px 6px rgba(0, 0, 0, 0.2);
+}
+.card .image {
+    grid-column: 1/2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #ddd;
+    background-size: cover;
+    background-position: center;
+    margin-left: 20%;
+    text-align :center;
+    padding : 10px;
+}
+.card .title{
+    grid-column: 2/4;
+    text-align :center;
+    padding : 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+.card .description{
+    grid-column: 4/8;
+    text-align :center;
+    padding : 10px;
+}
+.card .deadline{
+    grid-column: 8/9;
+    text-align :center;
+    padding : 10px;
+    font-weight: bold;
+}
+.card .price{
+    grid-column: 9/10;
+    text-align :center;
+    padding-left : 50%;
+    padding-bottom : 8%;
+    font-weight: 700;
+}
+.card .chat-button{
+    grid-column: 10/11;
+    text-align :center;
+    padding-left : 40%;
+}
+.chat-button {
+    display: flex;
+    align-items: right;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    text-decoration: none;
+}
+
+.chat-button a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.chat-button img.chat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.chat-button img.chat-icon:hover {
+    width: 54px;
+    height: 54px;
+}
+
+.edit-button{
+    grid-column: 10/11;
+    border-radius: 5px;
+}
+.edit-button:hover{
+    background-color: rgba(240, 248, 255, 0.718);
+    font-weight: 600;
+}
