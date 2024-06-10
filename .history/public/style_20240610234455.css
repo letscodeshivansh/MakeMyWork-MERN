@@ -12,7 +12,7 @@ body {
 
 .first-page {
     height: 110vh;
-    background: url('LandingPage2.jpg') no-repeat center top/cover;
+    background: url('LandingPage.jpg') no-repeat center top/cover;
     display: flex;
     padding-left: 40px;
 }
@@ -94,19 +94,19 @@ body {
     margin: 50px;
     font-weight: 450;
     font-size: 25px;
+    box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.7); 
 }
 
 .nav-items button a {
     text-decoration: none;
-    color: #ffffff;
+    color: #ff4154;
     font-size: 15px;
     z-index: 99;
-
 }
 
 .nav-items button:hover {
     text-decoration: none;
-    background-color: rgba(33, 35, 37, 0.718);
+    background-color: rgba(240, 248, 255, 0.718);
 }
 
 .nav-items a {
@@ -166,7 +166,7 @@ body {
     transition: box-shadow 0.3s ease;
     margin-bottom: 20px;
     background: linear-gradient(-20deg, #ffffff, #d9d6d396);
-    border-radius: 30px;
+    border-radius: 25px;
 }
 
 .card:hover {

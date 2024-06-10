@@ -12,53 +12,32 @@ body {
 
 .first-page {
     height: 110vh;
-    background: url('LandingPage2.jpg') no-repeat center top/cover;
+    background: url('LandingPage.jpg') no-repeat center top/cover;
     display: flex;
     padding-left: 40px;
 }
 
 .second-image {
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
     position: absolute;
-    bottom: 10%;
+    bottom: 1;
     left: 50%;
-    top: 32%;
+    top: 50%;
     transform: translateX(-50%);
     width: 60%;
-    height: 542px;
+    height: 470px;
     max-height: 80vh;
     background: url('LandingPage.jpg') no-repeat center/cover;
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); 
-    z-index: 1;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
 } 
 
 .second-image:hover {
     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); 
 } 
 
-.second-image .heading {
-    font-family: 'Dancing Script', cursive;
-    font-style: italic;
-    color: #FFFFFF; 
-    text-align: center; 
-    margin: 0; 
-    padding: 20px; 
-    z-index: 3; 
-    padding-top: 70px;
-}
 
-.second-image .subheading {
-    font-family: 'Dancing Script', cursive;
-    font-style: italic;
-    font-size: 50%;
-    color: #FFFFFF; /* Bright white color */
-    text-align: center; /* Center align text */
-    margin: 0; /* Remove default margins */
-    padding: 20px; /* Add padding if necessary */
-    z-index: 3; /* Ensure the heading is above other elements if needed */
-    padding-top: 30px;
+
+body:hover .second-image {
+    visibility: visible;
 }
 
 .black-bg {
@@ -98,21 +77,18 @@ body {
 
 .nav-items button a {
     text-decoration: none;
-    color: #ffffff;
+    color: #ff4154;
     font-size: 15px;
-    z-index: 99;
-
 }
 
 .nav-items button:hover {
     text-decoration: none;
-    background-color: rgba(33, 35, 37, 0.718);
+    background-color: rgba(240, 248, 255, 0.718);
 }
 
 .nav-items a {
     text-decoration: none;
     color: white;
-    z-index: 99;
 }
 
 .nav-items a:hover:not(.exclude-hover) {
@@ -132,10 +108,6 @@ body {
     position: absolute;
     top: 93%;
     margin-left: 2%;
-    z-index: 99;
-    align-items:baseline;
-    margin-left: 17%;
-    
 }
 
 .Explore-Work a:hover {
@@ -145,7 +117,6 @@ body {
 
 .nav-items button.Explore-Work a {
     color: white;
-    z-index: 99;
 }
 
 .black-bg h2 {
@@ -166,7 +137,7 @@ body {
     transition: box-shadow 0.3s ease;
     margin-bottom: 20px;
     background: linear-gradient(-20deg, #ffffff, #d9d6d396);
-    border-radius: 30px;
+    border-radius: 25px;
 }
 
 .card:hover {
