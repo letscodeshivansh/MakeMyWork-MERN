@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMyWork</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="first-page">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="logo-container">
+                        <img src="logo.png" alt="Logo" class="logo">
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8 col-sm-6">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="aboutus">About Us</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Service</a>
+                                    </li>
+                                    <li class="nav-item ms-auto">
+                                        <button type="button" class="btn btn-outline-danger">
+                                            <a href="#" class="nav-link">Hi, <% if (typeof loggedInUsername !== 'undefined' && loggedInUsername) { %>
+                                                <span><%= loggedInUsername %></span>
+                                            <% } %></a>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item">
+                                        <button type="button" class="btn btn-outline-danger">
+                                            <a href="chatroom" class="nav-link">ChatRoom</a>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="black-bg">
+        <div class="container">
+            <h2>Explore Work</h2>
+            <hr>
+            <div class="row">
+                <% tasks.forEach(task => { %>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                        <div class="card">
+                            <div class="taskOwner"><h6>Posted by: <%= task.taskOwner %> </h6></div>
+                            <div class="image" style="background-image: url('<%= task.images[0] %>');"></div>
+                            <div class="title"><%= task.title %></div>
+                            <div class="description"><h6>Description:</h6><%= task.description %></div>
+                            <div class="deadline"><h6>Deadline:</h6><%= task.deadline %></div>
+                            <div class="price">$<%= task.price %></div>
+                            <span class="chat-button">
+                                <a href="/chat/<%= task._id %>">
+                                    <img src="chat-icon.jpg" alt="Chat Icon" class="chat-icon"> 
+                                </a>
+                            </span>
+                            <% if (loggedInUsername === task.taskOwner) { %>
+                                <button class="edit-button">Edit</button>
+                            <% } %>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

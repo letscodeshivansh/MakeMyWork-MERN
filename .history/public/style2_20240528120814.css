@@ -1,0 +1,75 @@
+body{
+    background-color: rgba(240, 255, 255, 0.784);
+}
+.heading{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.heading h1{
+    line-height: 30px;
+    font-size: 30px;
+    color: deeppink;
+}
+form{
+    background-color: white;
+    padding: 25px 5px;
+    margin: auto;
+    max-width: 30%;
+    border: 3px solid whitesmoke;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.image{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.image img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.form-floating{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: deeppink;
+}
+.container-fluid{
+    height: 80px;
+    margin-top: 30px;
+    background-color: blue;
+}
+.row{
+    background-color: rgb(255, 0, 0);
+    height: 70px;
+}
+[class*="col-"]{/*This is a attribute which applies to all classes that starts with "col-" */
+    background-color: rgb(0, 255, 0);
+    height: 50px;
+    text-align: center;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+}
+.btn-primary{
+    background-color: deeppink;
+    border-color:deeppink;
+}
+.btn-primary:active{
+    background-color: deeppink;
+}
+.btn-primary:hover{
+    background-color: deeppink;
+    box-shadow: 2px 2px 5px rgba(0,0,0,1);
+}
+.ml-30{
+    margin-left: 30px;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.td button a{
+    text-decoration: none;
+    color: white;
+}

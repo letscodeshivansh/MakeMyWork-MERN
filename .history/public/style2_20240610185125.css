@@ -1,0 +1,55 @@
+body {
+    background-color: rgba(240, 255, 255, 0.784);
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.heading h1 {
+    line-height: 30px;
+    font-size: 30px;
+    color: deeppink;
+}
+
+form {
+    background-color: white;
+    padding: 25px 5px;
+    margin: auto;
+    max-width: 30%;
+    border: 3px solid whitesmoke;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.form-floating {
+    margin-left: 20px;
+    margin-right: 20px;
+    color: deeppink;
+}
+
+.container-fluid {
+    height: 80px;
+    margin-top: 30px;
+    background-color: blue;
+}
+
+.row {
+    background-color: rgb(255, 0, 0);
+    height:
