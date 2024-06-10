@@ -78,6 +78,10 @@ body {
 .Explore-Work{
     position: absolute;
     top: 93%;
+    margin-left: 2%;
+}
+.nav-items button.Explore-Work a{
+    color: white;
 }
 .carousel-item img {
     height: 500px;
