@@ -36,7 +36,7 @@ body {
 }
 
 /* Show the second image when hovering over the body */
-body:hover .second-image {
+body:hover .first-page .second-image {
     visibility: visible;
 }
 

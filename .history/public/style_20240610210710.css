@@ -27,18 +27,18 @@ body {
     max-height: 80vh;
     background: url('LandingPage.jpg') no-repeat center/cover;
     z-index: 999; /* Ensure the second-image is on top of other content */
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); /* Glow effect */
+
 }
 
+/* Additional style to push content down when the second image is visible */
+.push-content-down {
+    margin-bottom: 500px; /* Adjust this value as needed */
+}
 
 .second-image:hover {
     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); /* Glow effect */
 }
 
-/* Show the second image when hovering over the body */
-body:hover .second-image {
-    visibility: visible;
-}
 
 .black-bg {
     background-color: black;

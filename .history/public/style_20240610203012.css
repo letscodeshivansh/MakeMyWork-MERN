@@ -17,27 +17,15 @@ body {
     padding-left: 40px;
 }
 
-.second-image {
+.first-page .second-image {
     position: fixed;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60%;
-    height: 470px;
-    max-height: 80vh;
+    width: 60%; /* Adjust the width of the rectangle */
+    height: 450px; /* Let the height adjust according to the image's aspect ratio */
+    max-height: 80vh; /* Limit the height to 80% of the viewport height */
     background: url('LandingPage.jpg') no-repeat center/cover;
-    z-index: 999; /* Ensure the second-image is on top of other content */
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); /* Glow effect */
-}
-
-
-.second-image:hover {
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); /* Glow effect */
-}
-
-/* Show the second image when hovering over the body */
-body:hover .second-image {
-    visibility: visible;
 }
 
 .black-bg {

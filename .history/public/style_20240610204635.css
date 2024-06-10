@@ -18,6 +18,7 @@ body {
 }
 
 .second-image {
+    border-radius: 5%;
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -26,19 +27,13 @@ body {
     height: 470px;
     max-height: 80vh;
     background: url('LandingPage.jpg') no-repeat center/cover;
-    z-index: 999; /* Ensure the second-image is on top of other content */
-    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); /* Glow effect */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the glow effect */
 }
-
 
 .second-image:hover {
     box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); /* Glow effect */
 }
 
-/* Show the second image when hovering over the body */
-body:hover .second-image {
-    visibility: visible;
-}
 
 .black-bg {
     background-color: black;
