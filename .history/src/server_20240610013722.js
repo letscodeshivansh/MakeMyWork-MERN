@@ -165,7 +165,7 @@ app.post("/postwork", upload.array('images', 5), async (req, res) => {
             deadline,
             price,
             images: imageUrls,
-            taskOwner // Using req.session.loggedInUsername as task owner
+            taskOwner // Use req.session.loggedInUsername as task owner
         });
 
         await taskAdded.save();
