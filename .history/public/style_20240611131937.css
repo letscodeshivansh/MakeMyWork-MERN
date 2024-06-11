@@ -164,10 +164,10 @@ body {
     align-items: center;
     width: 100%;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     transition: box-shadow 0.3s ease;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     background: linear-gradient(-20deg, #ffffff, #d9d6d396);
     border-radius: 30px;
     box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);

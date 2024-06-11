@@ -18,9 +18,8 @@ body {
 }
 
 .second-image {
-    /* border-top-left-radius: 5%;
-    border-top-right-radius: 5%; */
-    border-radius: 5%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -70,12 +69,12 @@ body {
 }
 
 .logo-container {
-    margin-top: 15px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     overflow: hidden;
     background: url('logo.png') no-repeat center center;
     background-size: 150px 150px;
@@ -96,7 +95,7 @@ body {
     margin: 50px;
     font-weight: 450;
     font-size: 25px;
-    object-fit: contain;
+    aspect
 }
 
 .nav-items button a {
@@ -164,21 +163,20 @@ body {
     align-items: center;
     width: 100%;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 10px;
     box-sizing: border-box;
     transition: box-shadow 0.3s ease;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     background: linear-gradient(-20deg, #ffffff, #d9d6d396);
     border-radius: 30px;
-    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
 }
 
 .card:hover {
     box-shadow: 
-        10px 10px 10px rgba(174, 170, 170, 0.2),
-        -10px 10px 10px rgba(200, 200, 200, 0.2),
-        10px -10px 10px rgba(255, 255, 255, 0.2),
-        -10px -10px 10px rgba(215, 215, 215, 0.2);
+        6px 6px 6px rgba(221, 221, 221, 0.2),
+        -6px 6px 6px rgba(200, 200, 200, 0.2),
+        6px -6px 6px rgba(255, 255, 255, 0.2),
+        -6px -6px 6px rgba(215, 215, 215, 0.2);
 }
 
 .card .image {
