@@ -13,21 +13,18 @@
             <img src="logo.png" alt="Logo" class="logo">
         </div>
         <div class="nav-container">
+            <!-- <div class="nav-items"><a href="#"></a></div> -->
+            <div class="nav-items"><a href="index">Home</a></div>
+            <div class="nav-items"><a href="aboutus">About Us</a></div>
             <div class="nav-items">
-                <a href="index">Home</a>
-                <a href="aboutus">About Us</a>
-                <a href="chatroom">ChatRoom</a>
-                <a href="#">
-                    Hi, <% if (typeof loggedInUsername !== 'undefined' && loggedInUsername) { %>
-                    <p><%= loggedInUsername %></p>
-                    <% } %>
-                </a>
+                <button type="button">
+                    <a href="#">Hi, <% if (typeof loggedInUsername !== 'undefined' && loggedInUsername) { %>
+                        <p><%= loggedInUsername %></p>
+                    <% } %></a>
+                </button>
             </div>
-            <div class="navicons">
-                <!-- Placeholder for collapsed navigation items -->
-            </div>
+            <div class="nav-items"><a href="chatroom">ChatRoom</a></button></div>
         </div>
-        
         <div class="addwork"><button type="button" ><a href="postwork">Add Work</a></button></div>
     </div>
 

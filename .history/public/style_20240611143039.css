@@ -108,6 +108,7 @@ body {
     left: 50%;
     transform: translate(-50%, -40%); /* Adjust the value to move below the center */
     z-index: 99;
+    box-shadow: ;
     
 }
 
@@ -118,7 +119,6 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
     border-radius:10cap;
-    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
 }
 
 .addwork button a {
@@ -135,60 +135,31 @@ body {
     color: #ffffff; /* Maintain text color on hover */
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between; /* Align items to the ends */
-    align-items: center;
-    width: 100%; /* Ensure the container takes full width */
-    position: absolute;
-    left: 50%;
-    right: 0%;
-    z-index: 99;
-    object-fit: contain;
-}
-
-.nav-items {
-    display: flex;
-}
 
 .nav-items a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    margin-right: 80px; /* Add margin between items */
-    font-size: 20px; /* Decrease font size */
-    transition: margin-right 0.3s ease; /* Add transition effect */
+    color: white;
+    z-index: 99;
 }
 
-.nav-items a:hover {
-    font-weight: bold; /* Increase font weight on hover */
-    text-shadow: 0 0 0px #ddd; /* Add glow effect */
-    margin-right: 30px; /* Move the hovered item away from its original position */
+.nav-items a:hover:not(.exclude-hover) {
+    font-weight: 550;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.icons {
-    display: none; /* Hide the icons container by default */
+.nav-items-right1{
+    position: absolute;
+    left: 82%;
+}
+.nav-items-right2{
+    position: absolute;
+    left: 72%;
 }
 
-@media only screen and (max-width: 768px) {
-    .nav-items {
-        display: none; /* Hide the navigation items on smaller screens */
-    }
-    
-    .navicons {
-        position: fixed;
-        display: flex; /* Display the icons container */
-        align-items: center; /* Center the items vertically */
-        justify-content: flex-end; /* Align the items to the right */
-        margin-right: 20px; /* Add margin */
-        color: rgb(255, 255, 255);
-        font-size: 20px; /* Decrease font size */
-        z-index: 999;
-    }
+.nav-items button a {
+    color: white;
+    z-index: 99;
 }
-
-
-
-
 
 .black-bg h2 {
     text-align: left;
@@ -209,7 +180,7 @@ body {
     margin-bottom: 60px;
     background: linear-gradient(-20deg, #ffffff, #d9d6d396);
     border-radius: 30px;
-    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
+    
 }
 
 .card:hover {

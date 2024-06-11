@@ -174,7 +174,7 @@ body {
         display: none; /* Hide the navigation items on smaller screens */
     }
     
-    .navicons {
+    .icons {
         position: fixed;
         display: flex; /* Display the icons container */
         align-items: center; /* Center the items vertically */

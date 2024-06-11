@@ -154,7 +154,7 @@ body {
 .nav-items a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    margin-right: 80px; /* Add margin between items */
+    margin-right: 10px; /* Add margin between items */
     font-size: 20px; /* Decrease font size */
     transition: margin-right 0.3s ease; /* Add transition effect */
 }
@@ -174,18 +174,15 @@ body {
         display: none; /* Hide the navigation items on smaller screens */
     }
     
-    .navicons {
-        position: fixed;
+    .icons {
         display: flex; /* Display the icons container */
         align-items: center; /* Center the items vertically */
         justify-content: flex-end; /* Align the items to the right */
-        margin-right: 20px; /* Add margin */
+        margin-right: 10px; /* Add margin */
         color: rgb(255, 255, 255);
         font-size: 20px; /* Decrease font size */
-        z-index: 999;
     }
 }
-
 
 
 

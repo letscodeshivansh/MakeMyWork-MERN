@@ -174,7 +174,7 @@ body {
         display: none; /* Hide the navigation items on smaller screens */
     }
     
-    .navicons {
+    .icons {
         position: fixed;
         display: flex; /* Display the icons container */
         align-items: center; /* Center the items vertically */
@@ -182,7 +182,7 @@ body {
         margin-right: 20px; /* Add margin */
         color: rgb(255, 255, 255);
         font-size: 20px; /* Decrease font size */
-        z-index: 999;
+        z
     }
 }
 
