@@ -367,7 +367,7 @@ body {
         height: 70px;
     }
     .card .title {
-        grid-column: 1 / -1;
+        grid-column: 2 / 3;
         font-size: 20px;
     }
     .card .description {

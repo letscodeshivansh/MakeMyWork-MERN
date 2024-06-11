@@ -20,7 +20,7 @@ body {
 .second-image {
     /* border-top-left-radius: 5%;
     border-top-right-radius: 5%; */
-    border-radius:5cap;
+    border-radius: 5%;
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -65,8 +65,8 @@ body {
 .black-bg {
     background-color: black;
     color: white;
-    min-height: 100vh;
-    padding: 20vh 5% 0;
+    min-height: 50vh;
+    padding: 40vh 5% 0;
 }
 
 .logo-container {
@@ -221,7 +221,6 @@ body {
     margin: 45px 20px;
 }
 
-/* Base card styling */
 .card {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -246,7 +245,6 @@ body {
         -10px -10px 10px rgba(215, 215, 215, 0.2);
 }
 
-/* Card elements styling */
 .card .image {
     grid-column: 1 / 2;
     width: 100px;
@@ -288,9 +286,10 @@ body {
     padding-bottom: 8%;
     font-weight: 700;
     font-size: 20px;
+    
 }
 
-.car .price {
+.car .price{
     font-weight: bold;
 }
 
@@ -316,8 +315,8 @@ body {
 }
 
 .chat-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 
@@ -330,80 +329,5 @@ body {
     background-color: rgba(240, 248, 255, 0.718);
     font-weight: 600;
 }
-
-/* Responsive styling */
-@media (max-width: 1024px) {
-    .card {
-        grid-template-columns: repeat(8, 1fr);
-    }
-    .card .title {
-        grid-column: 2 / 5;
-    }
-    .card .description {
-        grid-column: 5 / 8;
-    }
-    .card .deadline {
-        grid-column: 8 / 9;
-    }
-    .card .price {
-        grid-column: 9 / 10;
-        padding-left: 0;
-    }
-    .card .chat-button {
-        grid-column: 10 / 11;
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .card {
-        grid-template-columns: repeat(4, 1fr);
-        text-align: center;
-    }
-    .card .image {
-        grid-column: 1 / -1;
-        margin-left: 0;
-        width: 70px;
-        height: 70px;
-    }
-    .card .title {
-        grid-column: 1 / -1;
-        font-size: 20px;
-    }
-    .card .description {
-        grid-column: 1 / -1;
-    }
-    .card .deadline {
-        grid-column: 1 / 3;
-    }
-    .card .price {
-        grid-column: 3 / 4;
-        padding-left: 0;
-        padding-bottom: 0;
-    }
-    .card .chat-button {
-        grid-column: 4 / 5;
-        padding-left: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        grid-template-columns: 1fr;
-    }
-    .card .image,
-    .card .title,
-    .card .description,
-    .card .deadline,
-    .card .price,
-
-
-    .card .chat-button {
-        grid-column: 1 / -1;
-        padding-left: 2px;
-        padding-bottom: 10px;
-    }
-}
-
 
 

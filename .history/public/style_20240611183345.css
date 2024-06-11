@@ -396,8 +396,6 @@ body {
     .card .description,
     .card .deadline,
     .card .price,
-
-
     .card .chat-button {
         grid-column: 1 / -1;
         padding-left: 2px;

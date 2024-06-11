@@ -367,7 +367,7 @@ body {
         height: 70px;
     }
     .card .title {
-        grid-column: 1 / -1;
+        grid-column: 2 / 3;
         font-size: 20px;
     }
     .card .description {
@@ -391,7 +391,8 @@ body {
     .card {
         grid-template-columns: 1fr;
     }
-    .card .image,
+    .card .image
+    },
     .card .title,
     .card .description,
     .card .deadline,

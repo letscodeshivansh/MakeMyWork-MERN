@@ -367,7 +367,7 @@ body {
         height: 70px;
     }
     .card .title {
-        grid-column: 1 / -1;
+        grid-column: 2 / -1;
         font-size: 20px;
     }
     .card .description {
@@ -396,8 +396,6 @@ body {
     .card .description,
     .card .deadline,
     .card .price,
-
-
     .card .chat-button {
         grid-column: 1 / -1;
         padding-left: 2px;

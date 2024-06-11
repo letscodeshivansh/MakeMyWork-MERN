@@ -363,8 +363,7 @@ body {
     .card .image {
         grid-column: 1 / -1;
         margin-left: 0;
-        width: 70px;
-        height: 70px;
+        size: ;
     }
     .card .title {
         grid-column: 1 / -1;
@@ -396,11 +395,9 @@ body {
     .card .description,
     .card .deadline,
     .card .price,
-
-
     .card .chat-button {
         grid-column: 1 / -1;
-        padding-left: 2px;
+        padding-left: 0;
         padding-bottom: 10px;
     }
 }
