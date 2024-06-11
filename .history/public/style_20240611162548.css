@@ -135,42 +135,6 @@ body {
     color: #ffffff; /* Maintain text color on hover */
 }
 
-.login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, -40%); /* Adjust the value to move below the center */
-    z-index: 99;
-    
-}
-
-.login button {
-    background-color: #c20020; /* Set the background color for the button */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    border-radius:10cap;
-    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
-}
-
-.login button a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 15px;
-}
-
-.login button:hover {
-    background-color: #660000; /* Change background color on hover */
-}
-
-.login button a:hover {
-    color: #ffffff; /* Maintain text color on hover */
-}
-
 .nav-container {
     display: flex;
     justify-content: space-between; /* Align items to the ends */
@@ -192,15 +156,17 @@ body {
     color: rgb(255, 255, 255);
     margin-right: 80px; /* Add margin between items */
     font-size: 20px; /* Decrease font size */
+    transition: margin-right 0.3s ease; /* Add transition effect */
 }
 
 .nav-items a:hover {
     font-weight: bold; /* Increase font weight on hover */
     text-shadow: 0 0 0px #ddd; /* Add glow effect */
+    margin-right: 30px; /* Move the hovered item away from its original position */
 }
 
-.nav-icons-btn {
-    display: none; /* Hide the navicons button by default */
+.icons {
+    display: none; /* Hide the icons container by default */
 }
 
 @media only screen and (max-width: 768px) {
@@ -208,11 +174,21 @@ body {
         display: none; /* Hide the navigation items on smaller screens */
     }
     
-    .nav-icons-btn {
-        display: block; /* Display the navicons button on smaller screens */
-        margin-right: 20px; /* Add margin */
+    .navicons {
+        position: fixed;
+        display: flex; /* Display the icons container */
+        align-items: center; /* Center the items vertically */
+        justify-content: flex-end; /* Align the items to the right */
+        margin-right: 0px; /* Add margin */
+        color: rgb(255, 255, 255);
+        font-size: 20px; /* Decrease font size */
+        z-index: 999;
+        margin-right: 50;
     }
 }
+
+
+
 
 
 .black-bg h2 {

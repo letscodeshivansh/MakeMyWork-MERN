@@ -24,7 +24,6 @@ form {
     max-width: 30%;
     border: 3px solid rgb(248, 247, 247);
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
 }
 
 .image {
@@ -58,7 +57,7 @@ form {
 
 [class*="col-"] {
     /* This is an attribute which applies to all classes that start with "col-" */
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(46, 42, 44);
     height: 50px;
     text-align: center;
 }
@@ -78,7 +77,7 @@ form {
 }
 
 .btn-primary:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(46, 42, 44);
     box-shadow: 2px 2px 5px rgba(0,0,0,1);
 }
 

@@ -17,13 +17,18 @@
                 <a href="index">Home</a>
                 <a href="aboutus">About Us</a>
                 <a href="chatroom">ChatRoom</a>
-                <a href="signup">SignUp!</a>
+                <a href="#">
+                    Hi, <% if (typeof loggedInUsername !== 'undefined' && loggedInUsername) { %>
+                    <p><%= loggedInUsername %></p>
+                    <% } %>
+                </a>
             </div>
             <div class="navicons">
+                <!-- Placeholder for collapsed navigation items -->
             </div>
         </div>
         
-        <div class="login"><button type="button" ><a href="login">login</a></button></div>
+        <div class="addwork"><button type="button" ><a href="postwork">Add Work</a></button></div>
     </div>
 
     <div class="second-image">

@@ -135,42 +135,6 @@ body {
     color: #ffffff; /* Maintain text color on hover */
 }
 
-.login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 87%;
-    left: 50%;
-    transform: translate(-50%, -40%); /* Adjust the value to move below the center */
-    z-index: 99;
-    
-}
-
-.login button {
-    background-color: #c20020; /* Set the background color for the button */
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    border-radius:10cap;
-    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
-}
-
-.login button a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 15px;
-}
-
-.login button:hover {
-    background-color: #660000; /* Change background color on hover */
-}
-
-.login button a:hover {
-    color: #ffffff; /* Maintain text color on hover */
-}
-
 .nav-container {
     display: flex;
     justify-content: space-between; /* Align items to the ends */
@@ -190,7 +154,7 @@ body {
 .nav-items a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-    margin-right: 80px; /* Add margin between items */
+    margin-right: 20px; /* Add margin between items */
     font-size: 20px; /* Decrease font size */
 }
 
@@ -213,6 +177,9 @@ body {
         margin-right: 20px; /* Add margin */
     }
 }
+
+
+
 
 
 .black-bg h2 {

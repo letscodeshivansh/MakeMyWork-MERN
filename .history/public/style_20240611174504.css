@@ -167,7 +167,7 @@ body {
     background-color: #660000; /* Change background color on hover */
 }
 
-.login button a:hover {
+.addwork button a:hover {
     color: #ffffff; /* Maintain text color on hover */
 }
 

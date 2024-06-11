@@ -1,7 +1,8 @@
 body {
     background-image: url('landingPage2.jpg');
     background-size: cover; /* Cover the entire background */
-
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; /* Center the background image */
     background-color: rgba(0, 0, 0, 0.784);
 }
 
@@ -24,7 +25,6 @@ form {
     max-width: 30%;
     border: 3px solid rgb(248, 247, 247);
     box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
 }
 
 .image {
@@ -58,7 +58,7 @@ form {
 
 [class*="col-"] {
     /* This is an attribute which applies to all classes that start with "col-" */
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(46, 42, 44);
     height: 50px;
     text-align: center;
 }
@@ -74,11 +74,11 @@ form {
 }
 
 .btn-primary:active {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(46, 42, 44);
 }
 
 .btn-primary:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(46, 42, 44);
     box-shadow: 2px 2px 5px rgba(0,0,0,1);
 }
 
