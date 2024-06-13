@@ -1,5 +1,8 @@
 # MakeMyWork
 
+![logo-mmw](https://github.com/letscodeshivansh/MakeMyWork-MERN/assets/125864444/64a90d2f-c430-4401-ba4b-3b8622ea6540)
+
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -74,3 +77,11 @@ We welcome contributions from developers, designers, and enthusiasts who are pas
 ## License
 
 MakeMyWork is licensed under the MIT License. See the LICENSE file for more details.
+
+## Screenshots: 
+
+![Screenshot 2024-06-13 210458](https://github.com/letscodeshivansh/MakeMyWork-MERN/assets/125864444/ab8c51cd-dee1-4457-acfe-ab867652d687)
+![Screenshot 2024-06-13 211002](https://github.com/letscodeshivansh/MakeMyWork-MERN/assets/125864444/3387b491-cab0-4077-93ac-6189087e4215)
+![Screenshot 2024-06-13 210932](https://github.com/letscodeshivansh/MakeMyWork-MERN/assets/125864444/806f5a6d-2081-4c39-8211-e6c92bdc5b08)
+![Screenshot 2024-06-13 210911](https://github.com/letscodeshivansh/MakeMyWork-MERN/assets/125864444/dd9d8718-1042-4ef1-8255-534c6ff4a969)
+![Screenshot 2024-06-13 211028](https://github.com/letscodeshivansh/MakeMyWork-MERN/assets/125864444/9d7f7e72-b971-45e3-8bb5-4559debed18e)
