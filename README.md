@@ -1,7 +1,7 @@
 
- ![logo-mmw-removebg-preview](https://github.com/letscodeshivansh/MakeMyWork-MERN/assets/125864444/ee17cd09-0a7b-4597-8971-5aac0db8596c)
 
 # MakeMyWork :space_invader:
+ ![logo-mmw-removebg-preview](https://github.com/letscodeshivansh/MakeMyWork-MERN/assets/125864444/ee17cd09-0a7b-4597-8971-5aac0db8596c)
 
 
 
