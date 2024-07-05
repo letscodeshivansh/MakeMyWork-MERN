@@ -290,7 +290,7 @@ body {
     font-size: 20px;
 }
 
-.card .price {
+.card:hover .price {
     font-weight: bold;
 }
 
