@@ -1,7 +1,9 @@
 
+<div align="center">
+    <img src="https://github.com/letscodeshivansh/MakeMyWork-MERN/assets/125864444/ee17cd09-0a7b-4597-8971-5aac0db8596c" alt="logo-mmw-removebg-preview" width="350"/>
+</div>
 
-# MakeMyWork :space_invader:
- ![logo-mmw-removebg-preview](https://github.com/letscodeshivansh/MakeMyWork-MERN/assets/125864444/ee17cd09-0a7b-4597-8971-5aac0db8596c)
+
 
 
 
