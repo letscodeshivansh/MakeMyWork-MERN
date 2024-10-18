@@ -12,30 +12,76 @@ body {
 
 .first-page {
     height: 110vh;
-    background: url('LandingPage.jpg') no-repeat center top/cover;
+    background: url('LandingPage2.jpg') no-repeat center top/cover;
     display: flex;
     padding-left: 40px;
+}
+
+.second-image {
+    /* border-top-left-radius: 5%;
+    border-top-right-radius: 5%; */
+    border-radius:5cap;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    top: 32%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 542px;
+    max-height: 80vh;
+    background: url('LandingPage.jpg') no-repeat center/cover;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); 
+    z-index: 1;
+} 
+
+.second-image:hover {
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); 
+} 
+
+.second-image .heading {
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    color: #FFFFFF; 
+    text-align: center; 
+    margin: 0; 
+    padding: 20px; 
+    z-index: 3; 
+    padding-top: 70px;
+}
+
+.second-image .subheading {
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    font-size: 50%;
+    color: #FFFFFF; /* Bright white color */
+    text-align: center; /* Center align text */
+    margin: 0; /* Remove default margins */
+    padding: 20px; /* Add padding if necessary */
+    z-index: 3; /* Ensure the heading is above other elements if needed */
+    padding-top: 30px;
 }
 
 .black-bg {
     background-color: black;
     color: white;
     min-height: 100vh;
-    padding: 40vh 5% 0;
+    padding: 20vh 5% 0;
 }
 
 .logo-container {
-    margin-top: 30px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     overflow: hidden;
     background: url('logo.png') no-repeat center center;
     background-size: 150px 150px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     grid-column: 1 / 6;
+
 }
 
 .logo {
@@ -50,51 +96,124 @@ body {
     margin: 50px;
     font-weight: 450;
     font-size: 25px;
+    object-fit: contain;
 }
 
-.nav-items button a {
+.addwork {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -40%); /* Adjust the value to move below the center */
+    z-index: 99;
+    
+}
+
+.addwork button {
+    background-color: #c20020; /* Set the background color for the button */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius:10cap;
+    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
+}
+
+.addwork button a {
     text-decoration: none;
-    color: #ff4154;
+    color: #ffffff;
     font-size: 15px;
 }
 
-.nav-items button:hover {
+.addwork button:hover {
+    background-color: #660000; /* Change background color on hover */
+}
+
+.addwork button a:hover {
+    color: #ffffff; /* Maintain text color on hover */
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -40%); /* Adjust the value to move below the center */
+    z-index: 99;
+    
+}
+
+.login button {
+    background-color: #c20020; /* Set the background color for the button */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius:10cap;
+    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
+}
+
+.login button a {
     text-decoration: none;
-    background-color: rgba(240, 248, 255, 0.718);
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.login button:hover {
+    background-color: #660000; /* Change background color on hover */
+}
+
+.login button a:hover {
+    color: #ffffff; /* Maintain text color on hover */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Align items to the ends */
+    align-items: center;
+    width: 100%; /* Ensure the container takes full width */
+    position: absolute;
+    left: 50%;
+    right: 0%;
+    z-index: 99;
+    object-fit: contain;
+}
+
+.nav-items {
+    display: flex;
 }
 
 .nav-items a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
+    margin-right: 80px; /* Add margin between items */
+    font-size: 20px; /* Decrease font size */
 }
 
-.nav-items a:hover:not(.exclude-hover) {
-    font-weight: 550;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.nav-items a:hover {
+    font-weight: bold; /* Increase font weight on hover */
+    text-shadow: 0 0 0px #ddd; /* Add glow effect */
 }
 
-.nav-items-right1{
-    position: absolute;
-    left: 82%;
-}
-.nav-items-right2{
-    position: absolute;
-    left: 72%;
-}
-.Explore-Work {
-    position: absolute;
-    top: 93%;
-    margin-left: 2%;
+.nav-icons-btn {
+    display: none; /* Hide the navicons button by default */
 }
 
-.Explore-Work a:hover {
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+@media only screen and (max-width: 768px) {
+    .nav-items {
+        display: none; /* Hide the navigation items on smaller screens */
+    }
+    
+    .nav-icons-btn {
+        display: block; /* Display the navicons button on smaller screens */
+        margin-right: 20px; /* Add margin */
+    }
 }
 
-.nav-items button.Explore-Work a {
-    color: white;
-}
 
 .black-bg h2 {
     text-align: left;
@@ -102,6 +221,7 @@ body {
     margin: 45px 20px;
 }
 
+/* Base card styling */
 .card {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -109,28 +229,30 @@ body {
     align-items: center;
     width: 100%;
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
     transition: box-shadow 0.3s ease;
-    margin-bottom: 20px;
-    background: linear-gradient(-20deg, #eb9eae85, #feb47b96);
-    border-radius: 15px;
+    margin-bottom: 60px;
+    background: linear-gradient(-20deg, #ffffff, #d9d6d396);
+    border-radius: 30px;
+    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
 }
 
 .card:hover {
     box-shadow: 
-        6px 6px 6px rgba(221, 221, 221, 0.2),
-        -6px 6px 6px rgba(200, 200, 200, 0.2),
-        6px -6px 6px rgba(255, 255, 255, 0.2),
-        -6px -6px 6px rgba(215, 215, 215, 0.2);
+        10px 10px 10px rgba(174, 170, 170, 0.2),
+        -10px 10px 10px rgba(200, 200, 200, 0.2),
+        10px -10px 10px rgba(255, 255, 255, 0.2),
+        -10px -10px 10px rgba(215, 215, 215, 0.2);
 }
 
+/* Card elements styling */
 .card .image {
     grid-column: 1 / 2;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background: #ddd;
+    background: #ffffff;
     background-size: cover;
     background-position: center;
     margin-left: 20%;
@@ -165,6 +287,11 @@ body {
     padding-left: 50%;
     padding-bottom: 8%;
     font-weight: 700;
+    font-size: 20px;
+}
+
+.card .price {
+    font-weight: bold;
 }
 
 .card .chat-button {
@@ -189,8 +316,8 @@ body {
 }
 
 .chat-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 
@@ -294,6 +421,28 @@ body {
 
     .card .chat-button {
         grid-column: 8 / 9;
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .card {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    .card .title {
+        grid-column: 2 / 5;
+    }
+    .card .description {
+        grid-column: 5 / 8;
+    }
+    .card .deadline {
+        grid-column: 8 / 9;
+    }
+    .card .price {
+        grid-column: 9 / 10;
+        padding-left: 0;
+    }
+    .card .chat-button {
+        grid-column: 10 / 11;
+        padding-left: 0;
     }
 }
 
@@ -372,4 +521,56 @@ body {
     .card .chat-button {
         grid-column: 8 / 9;
     }
+}
+    .card {
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+    }
+    .card .image {
+        grid-column: 1 / -1;
+        margin-left: 0;
+        width: 70px;
+        height: 70px;
+    }
+    .card .title {
+        grid-column: 1 / -1;
+        font-size: 20px;
+    }
+    .card .description {
+        grid-column: 1 / -1;
+    }
+    .card .deadline {
+        grid-column: 1 / 3;
+    }
+    .card .price {
+        grid-column: 3 / 4;
+        padding-left: 0;
+        padding-bottom: 0;
+    }
+    .card .chat-button {
+        grid-column: 4 / 5;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        grid-template-columns: 1fr;
+    }
+    .card .image,
+    .card .title,
+    .card .description,
+    .card .deadline,
+    .card .price,
+
+
+    .card .chat-button {
+        grid-column: 1 / -1;
+        padding-left: 2px;
+        padding-bottom: 10px;
+    }
+}
+
+
+
 }

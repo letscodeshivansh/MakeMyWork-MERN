@@ -1,0 +1,288 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+.first-page {
+    height: 110vh;
+    background: url('LandingPage2.jpg') no-repeat center top/cover;
+    display: flex;
+    padding-left: 40px;
+}
+
+.second-image {
+    /* border-top-left-radius: 5%;
+    border-top-right-radius: 5%; */
+    border-radius: 5%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    top: 32%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 542px;
+    max-height: 80vh;
+    background: url('LandingPage.jpg') no-repeat center/cover;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); 
+    z-index: 1;
+} 
+
+.second-image:hover {
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7); 
+} 
+
+.second-image .heading {
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    color: #FFFFFF; 
+    text-align: center; 
+    margin: 0; 
+    padding: 20px; 
+    z-index: 3; 
+    padding-top: 70px;
+}
+
+.second-image .subheading {
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    font-size: 50%;
+    color: #FFFFFF; /* Bright white color */
+    text-align: center; /* Center align text */
+    margin: 0; /* Remove default margins */
+    padding: 20px; /* Add padding if necessary */
+    z-index: 3; /* Ensure the heading is above other elements if needed */
+    padding-top: 30px;
+}
+
+.black-bg {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    padding: 40vh 5% 0;
+}
+
+.logo-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    background: url('logo.png') no-repeat center center;
+    background-size: 150px 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    grid-column: 1 / 6;
+
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+.nav-items {
+    margin: 50px;
+    font-weight: 450;
+    font-size: 25px;
+    object-fit: contain;
+}
+
+.addwork {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -40%); /* Adjust the value to move below the center */
+    z-index: 99;
+    
+}
+
+.addwork button {
+    background-color: #c20020; /* Set the background color for the button */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius:10cap;
+    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
+}
+
+.addwork button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.addwork button:hover {
+    background-color: #660000; /* Change background color on hover */
+}
+
+.addwork button a:hover {
+    color: #ffffff; /* Maintain text color on hover */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav items */
+    
+    width: 100%; /* Ensure the container takes full width */
+    position: absolute;
+    left: 20%;
+    right: 0%;
+    z-index: 99;
+    object-fit: contain;
+}
+
+.nav-items {
+    display: flex;
+  
+    justify-content: flex-end; /* Adjust spacing by moving items to the end */
+    gap: 20px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-items a:hover:not(.exclude-hover) {
+    font-weight: 550;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-items button a {
+    color: white;
+}
+
+
+
+.black-bg h2 {
+    text-align: left;
+    font-size: 69px;
+    margin: 45px 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 60px;
+    background: linear-gradient(-20deg, #ffffff, #d9d6d396);
+    border-radius: 30px;
+    box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.7);
+}
+
+.card:hover {
+    box-shadow: 
+        10px 10px 10px rgba(174, 170, 170, 0.2),
+        -10px 10px 10px rgba(200, 200, 200, 0.2),
+        10px -10px 10px rgba(255, 255, 255, 0.2),
+        -10px -10px 10px rgba(215, 215, 215, 0.2);
+}
+
+.card .image {
+    grid-column: 1 / 2;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ffffff;
+    background-size: cover;
+    background-position: center;
+    margin-left: 20%;
+    text-align: center;
+    padding: 10px;
+}
+
+.card .title {
+    grid-column: 2 / 4;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.card .description {
+    grid-column: 4 / 8;
+    text-align: center;
+    padding: 10px;
+}
+
+.card .deadline {
+    grid-column: 8 / 9;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.card .price {
+    grid-column: 9 / 10;
+    text-align: center;
+    padding-left: 50%;
+    padding-bottom: 8%;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+
+.car .price{
+    font-weight: bold;
+}
+
+.card .chat-button {
+    grid-column: 10 / 11;
+    text-align: center;
+    padding-left: 40%;
+}
+
+.chat-button {
+    display: flex;
+    align-items: right;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    text-decoration: none;
+}
+
+.chat-button a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.chat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.edit-button {
+    grid-column: 10 / 11;
+    border-radius: 5px;
+}
+
+.edit-button:hover {
+    background-color: rgba(240, 248, 255, 0.718);
+    font-weight: 600;
+}
+
+

@@ -1,0 +1,215 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+.first-page {
+    height: 110vh;
+    background: url('LandingPage.jpg') no-repeat center top/cover;
+    display: flex;
+    padding-left: 40px;
+}
+.second-image {
+    hei
+
+}
+
+.black-bg {
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+    padding: 40vh 5% 0;
+}
+
+.logo-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    background: url('logo.png') no-repeat center center;
+    background-size: 150px 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    grid-column: 1 / 6;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+.nav-items {
+    margin: 50px;
+    font-weight: 450;
+    font-size: 25px;
+}
+
+.nav-items button a {
+    text-decoration: none;
+    color: #ff4154;
+    font-size: 15px;
+}
+
+.nav-items button:hover {
+    text-decoration: none;
+    background-color: rgba(240, 248, 255, 0.718);
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-items a:hover:not(.exclude-hover) {
+    font-weight: 550;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-items-right1{
+    position: absolute;
+    left: 82%;
+}
+.nav-items-right2{
+    position: absolute;
+    left: 72%;
+}
+.Explore-Work {
+    position: absolute;
+    top: 93%;
+    margin-left: 2%;
+}
+
+.Explore-Work a:hover {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-items button.Explore-Work a {
+    color: white;
+}
+
+.black-bg h2 {
+    text-align: left;
+    font-size: 69px;
+    margin: 45px 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    background: linear-gradient(-20deg, #ffffff, #d9d6d396);
+    border-radius: 25px;
+}
+
+.card:hover {
+    box-shadow: 
+        6px 6px 6px rgba(221, 221, 221, 0.2),
+        -6px 6px 6px rgba(200, 200, 200, 0.2),
+        6px -6px 6px rgba(255, 255, 255, 0.2),
+        -6px -6px 6px rgba(215, 215, 215, 0.2);
+}
+
+.card .image {
+    grid-column: 1 / 2;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ffffff;
+    background-size: cover;
+    background-position: center;
+    margin-left: 20%;
+    text-align: center;
+    padding: 10px;
+}
+
+.card .title {
+    grid-column: 2 / 4;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.card .description {
+    grid-column: 4 / 8;
+    text-align: center;
+    padding: 10px;
+}
+
+.card .deadline {
+    grid-column: 8 / 9;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.card .price {
+    grid-column: 9 / 10;
+    text-align: center;
+    padding-left: 50%;
+    padding-bottom: 8%;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+
+.car .price{
+    font-weight: bold;
+}
+
+.card .chat-button {
+    grid-column: 10 / 11;
+    text-align: center;
+    padding-left: 40%;
+}
+
+.chat-button {
+    display: flex;
+    align-items: right;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    text-decoration: none;
+}
+
+.chat-button a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.chat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.edit-button {
+    grid-column: 10 / 11;
+    border-radius: 5px;
+}
+
+.edit-button:hover {
+    background-color: rgba(240, 248, 255, 0.718);
+    font-weight: 600;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Form</title>
+  <!-- Link to the Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('landingPage2.jpg');
+      background-size: cover; /* Cover the entire background */
+
+      background-color: rgba(0, 0, 0, 0.784);
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #f5f5f5;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <div class="container mx-auto mt-8">
+    <div class="nav-container">
+        <h1 class="text-xl font-bold">MakeMyWork</h1>
+        <p>Add your Task, <%= loggedInUsername %>!</p>  
+    </div>
+    <form action="/postwork" method="post" enctype="multipart/form-data" class="max-w-md mx-auto p-4 bg-white rounded shadow-md" id="taskForm">
+      <h2 class="text-lg text-gray-800 mb-4">Add Task</h2>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="title">Title</label>
+        <input class="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded" name="title" type="text"
+          placeholder="Enter task title" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="description">Description</label>
+        <textarea class="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded" name="description"
+          placeholder="Enter task description" required></textarea>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="deadline">Deadline</label>
+        <input id="deadline" class="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded" name="deadline" type="date"
+          placeholder="Enter task deadline" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="price">Price</label>
+        <input class="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded" name="price" type="number"
+          placeholder="Enter task price" required>
+      </div>
+      <!-- Input field for selecting images -->
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="images">Images</label>
+        <input type="file" name="images" multiple>
+      </div>
+      <button class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded" type="submit"> Add Task</button>
+      <!-- Hidden input to store the formatted deadline -->
+      <input type="hidden" id="formattedDeadline" name="formattedDeadline">
+    </form>
+  </div>
+
+  <!-- Load jQuery before the script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src = "pw.js">
+    
+  </script>
+
+</body>
+</html>

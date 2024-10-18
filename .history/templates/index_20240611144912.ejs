@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeMyWork</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="first-page">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="nav-container">
+            <div class="nav-items"><a href="index">Home</a></div>
+            <div class="nav-items"><a href="#">Service</a></div>
+            <div class="nav-items"><a href="aboutus">About Us</a></div>
+            <div class="nav-items">
+                <button type="button" class="btn btn-outline-danger">
+                    <a href="#" class="exclude-hover">Hi, <% if (typeof loggedInUsername !== 'undefined' && loggedInUsername) { %>
+                        <p><%= loggedInUsername %></p>
+                    <% } %></a>
+                </button>
+            </div>
+            <div class="nav-items"><button type="button" class="btn btn-outline-danger"><a href="chatroom">ChatRoom</a></button></div>
+        </div>
+        
+        <div class="nav-items"><button type="button" class="btn btn-outline-danger"><a href="chatroom">ChatRoom</a></button></div>
+        <div class="addwork"><button type="button" ><a href="postwork">Add Work</a></button></div>
+    </div>
+
+    <div class="second-image">
+        <div class="heading"><h3>Make My Work</h3></div>
+        <div class="subheading"><h2>Connecting Talent <br> With Opportunity</h2></div>
+    </div> 
+
+    <div class="black-bg">
+        <h2>Explore Work</h2>
+        <hr>
+        <div class="job-cards" id="job-cards">
+            <% tasks.forEach(task => { %>
+                <div class="card">
+                    <div class="taskOwner"><h6>Posted by: <%= task.taskOwner %> </h6></div>
+                    <div class="image" style="background-image: url('<%= task.images[0] %>');"></div>
+                    <div class="title"><%= task.title %></div>
+                    <div class="description"><h6>Description:</h6><%= task.description %></div>
+                    <div class="deadline"><h6>Deadline:</h6><span class="deadline-date"><%= task.deadline %></span></div>
+                    <div class="price">$<%= task.price %></div>
+                    <span class="chat-button">
+                        <a href="/chat/<%= task._id %>">
+                            <img src="chat-icon.jpg" alt="Chat Icon" class="chat-icon"> 
+                        </a>
+                    </span>
+                    <% if (loggedInUsername === task.taskOwner) { %>
+                        <button class="edit-button">Edit</button>
+                    <% } %>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Load jQuery before the script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.deadline-date').each(function() {
+                const dateStr = $(this).text();
+                const date = new Date(dateStr);
+                const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+                const formattedDate = date.toLocaleDateString('en-US', options);
+                $(this).text(formattedDate);
+            });
+        });
+    </script>
+</body>
+</html>

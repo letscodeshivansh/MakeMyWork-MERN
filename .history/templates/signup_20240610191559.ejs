@@ -1,0 +1,49 @@
+<!-- signup.ejs -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style2.css" rel="stylesheet">
+  <title>Sign Up Page</title>
+</head>
+<body>
+  <div class="heading">
+    <h1>Sign Up</h1>
+  </div>
+
+  <div class="container">
+    <form action="/signup" method="post">
+      <div class="image">
+        <img src="3.jpeg" alt="LOGO">
+      </div>
+      <!-- Display error message if exists -->
+      <% if (typeof error !== 'undefined' && error !== null) { %>
+        <div class="alert alert-danger" role="alert">
+          <%= error %>
+        </div>
+      <% } %>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" name="username" placeholder="username..." required>
+        <label for="username">Username</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="password" class="form-control" name="password" placeholder="Password" required>
+        <label for="password">Password</label>
+      </div>
+      <div class="submit mb-3">
+        <button type="submit" class="btn btn-primary" onclick="logging()">Sign Up</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  <script>
+    function logging() {
+      alert("Sign Up Successful!");
+    }
+  </script>
+</body>
+</html>
