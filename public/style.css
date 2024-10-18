@@ -203,3 +203,173 @@ body {
     background-color: rgba(240, 248, 255, 0.718);
     font-weight: 600;
 }
+@media (max-width: 1200px) {
+    .first-page {
+        flex-direction: column;
+    }
+
+    .nav-items {
+        margin: 10px;
+        font-size: 20px;
+        position: absolute;
+        right: 2.5vw;
+    }
+    .nav-items a{
+        margin: 10px 0;
+    }
+
+    .nav-items-right1,
+    .nav-items-right2 {
+        position: static;
+        margin: 10px;
+    }
+
+    .Explore-Work {
+        position: absolute;
+        right: 2.5vw;
+        /* top: 20vh; */
+    }
+
+    .card {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .card .image {
+        grid-column: 1 / 2;
+    }
+
+    .card .title {
+        grid-column: 2 / 4;
+    }
+
+    .card .description {
+        grid-column: 4 / 8;
+    }
+
+    .card .deadline {
+        grid-column: 8 / 9;
+    }
+
+    .card .price {
+        grid-column: 9 / 10;
+    }
+
+    .card .chat-button {
+        grid-column: 10 / 11;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-items {
+        font-size: 18px;
+    }
+
+    .black-bg h2 {
+        font-size: 36px;
+    }
+
+    .card {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .card .image {
+        grid-column: 1 / 2;
+    }
+
+    .card .title {
+        grid-column: 2 / 4;
+    }
+
+    .card .description {
+        grid-column: 4 / 6;
+    }
+
+    .card .deadline {
+        grid-column: 6 / 7;
+    }
+
+    .card .price {
+        grid-column: 7 / 8;
+    }
+
+    .card .chat-button {
+        grid-column: 8 / 9;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-items {
+        font-size: 16px;
+    }
+
+    .black-bg h2 {
+        font-size: 30px;
+    }
+
+    .card {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card .image {
+        grid-column: 1 / 2;
+    }
+
+    .card .title {
+        grid-column: 2 / 4;
+    }
+
+    .card .description {
+        grid-column: 4 / 6;
+    }
+
+    .card .deadline {
+        grid-column: 6 / 7;
+    }
+
+    .card .price {
+        grid-column: 7 / 8;
+    }
+
+    .card .chat-button {
+        grid-column: 8 / 9;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-items {
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .black-bg h2 {
+        font-size: 24px;
+    }
+
+    .card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card .image {
+        grid-column: 1 / 2;
+    }
+
+    .card .title {
+        grid-column: 2 / 4;
+    }
+
+    .card .description {
+        grid-column: 4 / 6;
+    }
+
+    .card .deadline {
+        grid-column: 6 / 7;
+    }
+
+    .card .price {
+        grid-column: 7 / 8;
+    }
+
+    .card .chat-button {
+        grid-column: 8 / 9;
+    }
+}
